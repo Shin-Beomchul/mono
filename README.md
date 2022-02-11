@@ -1,5 +1,3 @@
-
-
 ## use
 Name         | Version    |
 :------      | :------    |
@@ -15,16 +13,17 @@ Name         | Version    |
 - npm install -g lerna(4.0.0)    
 - npm install @vue/cli -g (@vue/cli 4.5.15 - Optional)
 
-- lerna bootstrap --hoist
+- lerna bootstrap
 - cd /applications/dml
 - yarn serve
-
 
 ## plugins
 - ESLint
 - Vetur or volar
 
-
-
 ## refs
 - lerna with yarn 정리 : https://awesomezero.com/development/lerna_and_yarn_workspace/
+
+
+
+elnt package main에 index.js 포함해서 재시도 해보기.

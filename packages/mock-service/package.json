@@ -1,0 +1,24 @@
+{
+  "name": "@god/mock-service",
+  "version": "1.0.0",
+  "description": "http network client ",
+  "keywords": [
+    "http"
+  ],
+  "author": "BeomChul <sbc0830@osstem.com>",
+  "license": "ISC",
+  "main": "lib/MockService.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}
