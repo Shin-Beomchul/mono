@@ -122,7 +122,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-// import MockService from "@god/mock-service";
+import MockService from "@god/mock-service";
+import { MockAPIMode } from "@god/mock-service/lib/NetworkTypes";
 
 export default defineComponent({
     name: "HelloWorld",
@@ -130,8 +131,8 @@ export default defineComponent({
         msg: String,
     },
     created() {
-        // MockService.getMockAxiosResponse().then((r: any) => console.log("use MockService", r));
-        // console.log(MockAPIMode.FAST);
+        MockService.getMockAxiosResponse().then((r: any) => console.log("use MockService", r));
+        console.log("oh Type ", MockAPIMode.FAST);
     }
 });
 </script>

@@ -26,4 +26,7 @@ Name         | Version    |
 
 
 
-elnt package main에 index.js 포함해서 재시도 해보기.
+## 더 정의로우려면
+- esLint 분리 (Typescript , vue)
+- 모듈 index 
+2. elnt package main에 index.js 포함해서 재시도 해보기.
