@@ -1,12 +1,12 @@
 export function sayHello() {
-    console.log("hi im'From @god/hello-type-lib Module");
+    console.log("hi i'm from @god/hello-type-lib Function ");
 }
 export function sayGoodbye() {
     console.log("goodbye All Applications ~ ");
 }
 export class HelloTypeClass {
     constructor() {
-        this.name = "hi I'm @god/hello-type-lib In HelloTypeClass Field";
+        this.name = "hi i'm from @god/hello-type-lib HelloTypeClass In Field!!";
     }
     getName() {
         return this.name;

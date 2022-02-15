@@ -7,12 +7,12 @@
 ## Usage
 - Applications/someApp
 ```
-import MockService from "@god/mock-service";
-import { MockAPIMode } from "@god/mock-service/lib/NetworkTypes";
+import { MockService, MockAPIMode } from "@god/mock-service";
 
 
-let mockService = new MockService();
-mockService.getMockAxiosResponse().then((r) => console.log("use MockService", r));
-console.log("oh Type ", MockAPIMode.FAST);
+ let mockService = new MockService();
+ mockService
+    .getMockAxiosResponse(MockAPIMode.FAST)
+    .then((r) => console.log("use MockService", r));
 
 ```

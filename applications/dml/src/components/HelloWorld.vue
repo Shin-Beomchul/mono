@@ -122,8 +122,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import MockService from "@god/mock-service";
-import { MockAPIMode } from "@god/mock-service/lib/NetworkTypes";
+import { MockService, MockAPIMode } from "@god/mock-service";
 import { sayHello } from "@god/hello-type-lib";
 import { HelloTypeClass } from "@god/hello-type-lib";
 
@@ -133,15 +132,15 @@ export default defineComponent({
         msg: String,
     },
     created() {
-        //@@god/hello-type-lib
+        // @@god/hello-type-lib
         sayHello();
         let heloTypeClass = new HelloTypeClass();
         console.log(heloTypeClass.getName());
 
-        //@god/mock-service
+        // @god/mock-service
         let mockService = new MockService();
-        mockService.getMockAxiosResponse().then((r) => console.log("use MockService", r));
-        console.log("oh Type ", MockAPIMode.FAST);
+        mockService.getMockAxiosResponse(MockAPIMode.FAST)
+            .then((r) => console.log("use MockService", r));
     }
 });
 </script>
