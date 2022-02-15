@@ -21,12 +21,17 @@ Name         | Version    |
 - ESLint
 - Vetur or volar
 
+
+## TypeScript모듈 컴파일 
+- cd {yourPath}/mono/packages/hello-type-lib
+- tsc 
+
+
+
 ## refs
 - lerna with yarn 정리 : https://awesomezero.com/development/lerna_and_yarn_workspace/
 
 
-
 ## 더 정의로우려면
-- esLint 분리 (Typescript , vue)
-- 모듈 index 
-2. elnt package main에 index.js 포함해서 재시도 해보기.
+- esLint 공통화 (Typescript, vue)
+- packages/* index.ts 전환

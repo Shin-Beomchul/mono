@@ -46,4 +46,4 @@ class MockService {
         });
     }
 }
-export default new MockService();
+export default MockService;

@@ -124,6 +124,8 @@
 import { defineComponent } from "vue";
 import MockService from "@god/mock-service";
 import { MockAPIMode } from "@god/mock-service/lib/NetworkTypes";
+import { sayHello } from "@god/hello-type-lib";
+import { HelloTypeClass } from "@god/hello-type-lib";
 
 export default defineComponent({
     name: "HelloWorld",
@@ -131,7 +133,14 @@ export default defineComponent({
         msg: String,
     },
     created() {
-        MockService.getMockAxiosResponse().then((r: any) => console.log("use MockService", r));
+        //@@god/hello-type-lib
+        sayHello();
+        let heloTypeClass = new HelloTypeClass();
+        console.log(heloTypeClass.getName());
+
+        //@god/mock-service
+        let mockService = new MockService();
+        mockService.getMockAxiosResponse().then((r) => console.log("use MockService", r));
         console.log("oh Type ", MockAPIMode.FAST);
     }
 });
