@@ -1,6 +1,6 @@
 {
   "name": "@god/type-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "http network client ",
   "keywords": [
     "http"
@@ -16,10 +16,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
-
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build" : "tsc"
+    "build": "tsc"
   },
   "dependencies": {
     "axios": "^0.24.0"

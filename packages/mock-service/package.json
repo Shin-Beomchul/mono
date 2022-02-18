@@ -1,6 +1,6 @@
 {
   "name": "@god/mock-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "http network client ",
   "keywords": [
     "http"
