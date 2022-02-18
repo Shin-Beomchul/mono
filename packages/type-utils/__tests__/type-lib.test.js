@@ -1,7 +1,7 @@
 "use strict";
 
-import { sayHello } from "@god/hello-type-lib";
-import { HelloTypeClass } from "@god/hello-type-lib";
+import { sayHello } from "@god/type-utils";
+import { HelloTypeClass } from "@god/type-utils";
 describe("network", () => {
     sayHello();
     let instance = new HelloTypeClass();
