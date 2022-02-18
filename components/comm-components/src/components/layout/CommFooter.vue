@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="comm-gnb">Comm Gnb</div>
+        <div id="comm-gnb">Comm Footer</div>
     </div>
 </template>
 
@@ -8,13 +8,13 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-    name: "CommGnb"
+    name: "CommFooter"
 });
 </script>
 
 <style scoped lang="scss">
 #comm-gnb {
- background: #42b983;
+ background: #b94248;
 }
 
 </style>

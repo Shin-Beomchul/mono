@@ -3,5 +3,10 @@ module.exports = {
     'vetur.useWorkspaceDependencies': true,
     'vetur.experimental.templateInterpolationService': true
   },
-  projects: ['./applications/dml', './packages/type-utils', './packages/mock-service','./components/comm-components']
+  projects: [
+   './applications/dml',
+   './packages/type-utils', 
+   './packages/mock-service',
+   './components/comm-components'
+]
 };

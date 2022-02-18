@@ -27,6 +27,17 @@ Name         | Version    |
 - cd {yourPath}/mono/packages/type-utils
 - tsc 
 
+
+## comm-components 추가.
+ - A.vue 추가.
+ - types 추가.
+ - yarn build
+ - lerna bootstrap 
+
+ ## comm-components 수정.
+ - A.vue 수정.
+ - yarn build
+ 
 ## Repo Rules
   - packages 모듈간 의존하지 않아야 한다.
   - 역 결합 되어선 안된다.(packages/*모듈에서 applications/*, components/* 코드를 참조하는 행위)

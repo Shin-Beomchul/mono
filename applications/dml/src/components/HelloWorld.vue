@@ -3,6 +3,7 @@
         <comm-gnb></comm-gnb>
         <h1>{{ msg }}</h1>
         <comm-component></comm-component>
+        <comm-footer></comm-footer>
     </div>
 </template>
 
@@ -12,12 +13,13 @@ import { MockService, MockAPIMode } from "@god/mock-service";
 import { sayHello } from "@god/type-utils";
 import { HelloTypeClass } from "@god/type-utils";
 import { CommComponent } from "@god/comm-components";
-import { CommGnb } from "@god/comm-components";
+import { CommGnb, CommFooter } from "@god/comm-components";
 
 export default defineComponent({
     components: {
         CommComponent,
-        CommGnb
+        CommGnb,
+        CommFooter
     },
     name: "HelloWorld",
     props: {
