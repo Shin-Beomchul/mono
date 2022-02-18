@@ -1,8 +1,8 @@
 <template>
     <div class="hello">
+        <comm-gnb></comm-gnb>
         <h1>{{ msg }}</h1>
         <comm-component></comm-component>
-        <comm-gnb></comm-gnb>
     </div>
 </template>
 
@@ -24,7 +24,7 @@ export default defineComponent({
         msg: String,
     },
     created() {
-        console.log("??", CommComponent, CommGnb);
+        console.log("comm Component", CommComponent, CommGnb);
         /* @@god/hello-type-lib*/
         sayHello(); // function
         let heloTypeClass = new HelloTypeClass(); // Class
