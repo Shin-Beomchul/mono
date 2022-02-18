@@ -30,13 +30,15 @@ Name         | Version    |
 
 ## Repo Rules
   - packages 모듈간 의존하지 않아야 한다.
-  - 어떤경우도 역 결합 되어선 안된다.(packages/*모듈내에 applications/*, components/* 코드 참조하는 행위)
+  - 역 결합 되어선 안된다.(packages/*모듈에서 applications/*, components/* 코드를 참조하는 행위)
 
 ## refs
 - lerna with yarn 정리 : https://awesomezero.com/development/lerna_and_yarn_workspace/
 - 플러그인 : https://velog.io/@skyepodium/%EB%82%B4-%EC%B5%9C%EC%95%A0-VS-Code-%ED%99%95%EC%9E%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8
 - tsconfig 이해1 : https://velog.io/@sooran/tsconfig.json-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EC%95%8C%EA%B3%A0-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0
 - tsconfig 옵션 설명 : https://typescript-kr.github.io/pages/tsconfig.json.html
+- 순수 컴포넌트 모듈 관련 : https://github.com/pixari/component-library-monorepo
+- ts Lerna : https://github.com/dz333333/vue-ts-ui
 
 ## CodeGen
 1. wget https://petstore.swagger.io/v2/swagger.json
@@ -47,6 +49,8 @@ Name         | Version    |
  https://library.gabia.com/contents/8492/
 
 
-## 더 정의로우려면
+## 더 
 - esLint 공통화 (Typescript, vue)
+- packages/*, components/* save To build 
 - packages/* index.ts 전환 -> 완료 (2.15)
+- Git Publish 연동 Shell 
