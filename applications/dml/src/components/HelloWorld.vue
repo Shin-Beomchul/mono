@@ -9,10 +9,10 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { MockService, MockAPIMode } from "@god/mock-service";
-import { sayHello } from "@god/hello-type-lib";
-import { HelloTypeClass } from "@god/hello-type-lib";
-import { CommComponent } from "@god/valina-vue-components";
-import { CommGnb } from "@god/valina-vue-components";
+import { sayHello } from "@god/type-utils";
+import { HelloTypeClass } from "@god/type-utils";
+import { CommComponent } from "@god/comm-components";
+import { CommGnb } from "@god/comm-components";
 
 export default defineComponent({
     components: {
@@ -25,7 +25,7 @@ export default defineComponent({
     },
     created() {
         console.log("comm Component", CommComponent, CommGnb);
-        /* @@god/hello-type-lib*/
+        /* @@god/type-utils*/
         sayHello(); // function
         let heloTypeClass = new HelloTypeClass(); // Class
         console.log(heloTypeClass.getName());

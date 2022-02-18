@@ -1,5 +1,5 @@
 {
-  "name": "@god/hello-type-lib",
+  "name": "@god/type-utils",
   "version": "1.0.0",
   "description": "http network client ",
   "keywords": [
@@ -18,7 +18,8 @@
   },
 
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build" : "tsc"
   },
   "dependencies": {
     "axios": "^0.24.0"

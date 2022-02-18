@@ -1,5 +1,3 @@
-// const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
-
 module.exports = {
     css: {
         extract: false,
@@ -20,7 +18,4 @@ module.exports = {
     chainWebpack: config => {
         config.resolve.symlinks(false);
     }
-    // configureWebpack: {
-    //   plugins: [new BundleAnalyzerPlugin()],
-    // },
 };

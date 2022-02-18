@@ -8,7 +8,6 @@ Name         | Version    |
 `tsc`        | 4.5.4      |  
 
 
-
 ## installs 
 - nvm use 16.14.0
 - npm install --global yarn (1.22.17)
@@ -25,7 +24,7 @@ Name         | Version    |
 
 
 ## TypeScript모듈 컴파일 
-- cd {yourPath}/mono/packages/hello-type-lib
+- cd {yourPath}/mono/packages/type-utils
 - tsc 
 
 ## Repo Rules

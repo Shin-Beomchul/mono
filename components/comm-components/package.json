@@ -1,5 +1,5 @@
 {
-  "name": "@god/valina-vue-components",
+  "name": "@god/comm-components",
   "version": "0.1.0",
   "main": "dist/index.umd.min.js",
   "types": "dist/index.d.ts",
