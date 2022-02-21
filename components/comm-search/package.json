@@ -1,19 +1,16 @@
 {
-  "name": "dml",
+  "name": "@god/comm-search",
   "version": "0.1.1",
+  "main": "src/components/index.ts",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --inline-vue --name index ./src/index.ts && tsc ./src/types/index.ts --declaration --allowJs --emitDeclarationOnly --outDir dist",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@god/comm-search": "^0.1.0",
-    "@god/comm-components": "^0.1.1",
-    "@god/mock-service": "^1.0.1",
-    "@god/type-utils": "^1.0.1",
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
@@ -23,7 +20,6 @@
   "devDependencies": {
     "@types/chai": "^4.2.11",
     "@types/mocha": "^5.2.4",
-    "@types/node": "^17.0.18",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "~4.5.0",

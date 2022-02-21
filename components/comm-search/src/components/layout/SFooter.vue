@@ -9,7 +9,7 @@
 import { defineComponent } from "vue";
 import GBtn from "./GBtn.vue";
 export default defineComponent({
-    name: "CommFooter",
+    name: "SFooter",
     components: {
         GBtn
     }

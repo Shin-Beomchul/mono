@@ -4,6 +4,7 @@
         <h1>{{ msg }}</h1>
         <comm-component></comm-component>
         <comm-footer></comm-footer>
+        <s-footer></s-footer>
     </div>
 </template>
 
@@ -14,12 +15,14 @@ import { sayHello } from "@god/type-utils";
 import { HelloTypeClass } from "@god/type-utils";
 import { CommComponent } from "@god/comm-components";
 import { CommGnb, CommFooter } from "@god/comm-components";
+import { SFooter } from "@god/comm-search";
 
 export default defineComponent({
     components: {
         CommComponent,
         CommGnb,
-        CommFooter
+        CommFooter,
+        SFooter
     },
     name: "HelloWorld",
     props: {

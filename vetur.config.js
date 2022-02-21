@@ -7,6 +7,7 @@ module.exports = {
    './applications/dml',
    './packages/type-utils', 
    './packages/mock-service',
-   './components/comm-components'
+   './components/comm-components',
+   './components/comm-search'
 ]
 };
