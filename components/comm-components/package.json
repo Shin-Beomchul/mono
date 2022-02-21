@@ -1,12 +1,8 @@
 {
   "name": "@god/comm-components",
   "version": "0.1.1",
-  "main": "dist/index.umd.min.js",
-  "types": "dist/index.d.ts",
+  "main": "src/export/index.ts",
   "private": true,
-  "files": [
-    "dist/*"
-  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --inline-vue --name index ./src/index.ts && tsc ./src/types/index.ts --declaration --allowJs --emitDeclarationOnly --outDir dist",

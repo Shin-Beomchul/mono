@@ -21,7 +21,7 @@ Name         | Version    |
     ㄴ dsv : 서비스 프로젝트
 
 --components
-    ㄴ comm-components : 공통 컴포넌트(Pre Build)
+    ㄴ comm-components : 공통 컴포넌트
     ㄴ comm-search : 통합검색 컴포넌트
 
 --packages
@@ -64,16 +64,6 @@ Name         | Version    |
 - cd {yourPath}/mono/packages/type-utils
 - tsc 
 
-
-## comm-components 추가.@deprecated("too complication")
- - A.vue 추가.
- - types 추가.
- - yarn build
- - lerna bootstrap 
-
- ## comm-components 수정.@deprecated("too complication")
- - A.vue 수정.
- - yarn build
 
 ## refs
 - lerna with yarn 정리 : https://awesomezero.com/development/lerna_and_yarn_workspace/
