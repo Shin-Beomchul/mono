@@ -8,5 +8,12 @@
   ],
   "devDependencies": {
     "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "dml:build": "yarn workspace dml build",
+    "dml:serve": "yarn workspace dml serve",
+
+    "search:build": "yarn workspace @god/comm-search build",
+    "search:serve": "yarn workspace @god/comm-search serve"
   }
 }

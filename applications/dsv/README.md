@@ -26,7 +26,7 @@ Name         | Version    |
 
 --packages
     ㄴ mock-service : MockService 패키지
-    ㄴ type-utils : 유틸 패키지(Pre Build)
+    ㄴ type-utils : : 유틸 패키지(Pre Build)
 ~~~
 
 
@@ -39,17 +39,13 @@ Name         | Version    |
   - components/*는 applications workspace에서만 참조.
 
 
-## plugins
-- ESLint
-- Vetur
-
-## installs
+## installs 
 - nvm use 16.14.0
 - npm install --global yarn (1.22.17)
 - npm install -g lerna(4.0.0)    
 - npm install @vue/cli -g (@vue/cli 4.5.15 - Optional)
+
 - lerna bootstrap
-- lerna run build
 
 ## workspace Script
 - cd {yourPath}/mono 
@@ -58,20 +54,23 @@ Name         | Version    |
 - "search:build": "yarn workspace @god/comm-search build",
 - "search:serve": "yarn workspace @god/comm-search serve"
 
-
+## plugins
+- ESLint
+- Vetur or volar
 
 ## TypeScript모듈 컴파일 
 - cd {yourPath}/mono/packages/type-utils
 - tsc 
 
 
-## comm-components 추가.@deprecated("too complication")
+
+## comm-components 추가.
  - A.vue 추가.
  - types 추가.
  - yarn build
  - lerna bootstrap 
 
- ## comm-components 수정.@deprecated("too complication")
+ ## comm-components 수정.
  - A.vue 수정.
  - yarn build
 
