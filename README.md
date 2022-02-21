@@ -8,6 +8,39 @@ Name         | Version    |
 `tsc`        | 4.5.4      |  
 
 
+
+## Mono도입 의도
+ 1. 모듈별 격리 : 각 모듈들은 IDE를 통해 독립 실행 & 테스트 가능
+ 2. 재사용 : 공통으로 사용하는 컴포넌트, 화면, 모듈화
+
+ 
+ ## Mono프로젝트 구조.
+~~~
+--applications
+    ㄴ dml : 몰 프로젝트
+    ㄴ dsv : 서비스 프로젝트
+
+--components
+    ㄴ comm-components : 공통 컴포넌트(Pre Build)
+    ㄴ comm-search : 통합검색 컴포넌트
+
+--packages
+    ㄴ mock-service : MockService 패키지
+    ㄴ type-utils : : 유틸 패키지(Pre Build)
+~~~
+
+
+## Repo Rules
+  - applications/* 모듈간 의존하지 않아야 한다.
+  - components/* 모듈간 의존하지 않아야 한다.
+  - packages/* 모듈간 의존하지 않아야 한다.
+
+  - packages/*는 다른 workspace에서도 자유롭게 참조 가능.
+  - components/*는 applications workspace에서만 참조.
+
+
+
+
 ## installs 
 - nvm use 16.14.0
 - npm install --global yarn (1.22.17)
@@ -28,21 +61,6 @@ Name         | Version    |
 - tsc 
 
 
-~~~
---applications
-    ㄴ dml : 몰 프로젝트
-    ㄴ dsv : 서비스 프로젝트
-
---components
-    ㄴ comm-components : 공통 컴포넌트(Pre Build)
-    ㄴ comm-search : 통합검색 컴포넌트
-
---packages
-    ㄴ mock-service : MockService 패키지
-    ㄴ type-utils : : 유틸 패키지(Pre Build)
-~~~
-
-
 
 ## comm-components 추가.
  - A.vue 추가.
@@ -53,10 +71,6 @@ Name         | Version    |
  ## comm-components 수정.
  - A.vue 수정.
  - yarn build
- 
-## Repo Rules
-  - packages 모듈간 의존하지 않아야 한다.
-  - 역 결합 되어선 안된다.(packages/*모듈에서 applications/*, components/* 코드를 참조하는 행위)
 
 ## refs
 - lerna with yarn 정리 : https://awesomezero.com/development/lerna_and_yarn_workspace/
