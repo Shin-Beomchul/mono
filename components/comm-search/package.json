@@ -1,7 +1,7 @@
 {
   "name": "@god/comm-search",
   "version": "0.1.1",
-  "main": "src/components/index.ts",
+  "main": "src/export/index.ts",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

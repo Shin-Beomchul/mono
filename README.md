@@ -28,6 +28,22 @@ Name         | Version    |
 - tsc 
 
 
+~~~
+--applications
+    ㄴ dml : 몰 프로젝트
+    ㄴ dsv : 서비스 프로젝트
+
+--components
+    ㄴ comm-components : 공통 컴포넌트(Pre Build)
+    ㄴ comm-search : 통합검색 컴포넌트
+
+--packages
+    ㄴ mock-service : MockService 패키지
+    ㄴ type-utils : : 유틸 패키지(Pre Build)
+~~~
+
+
+
 ## comm-components 추가.
  - A.vue 추가.
  - types 추가.
