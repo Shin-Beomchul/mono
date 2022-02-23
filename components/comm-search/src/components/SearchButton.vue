@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button>검색</button>
+        <button>검색!</button>
     </div>
 </template>
 

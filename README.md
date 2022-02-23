@@ -29,6 +29,16 @@ Name         | Version    |
     ㄴ type-utils : 유틸 패키지(Pre Build)
 ~~~
 
+## 프로젝트 실행과정
+```mermaid
+graph LR
+A(Start) --lerna bootstrap --> B(모듈종속성 호이스팅) --lerna run build--> C(모듈Pre빌드)
+C--yarn dml:serve -->D([DML프로젝트실행])
+C--yarn dsv:serve-->E([DSV프로젝트실행])
+C--yarn search:serve -->F([comm-search프로젝트실행])
+C--yarn xxx:serve -->G([some your Project])
+```
+
 
 ## Repo Rules
   - applications/* 모듈간 의존하지 않아야 한다.
@@ -37,7 +47,6 @@ Name         | Version    |
 
   - packages/*는 다른 workspace에서도 자유롭게 참조 가능.
   - components/*는 applications workspace에서만 참조.
-
 
 ## plugins
 - ESLint
@@ -51,6 +60,8 @@ Name         | Version    |
 - lerna bootstrap
 - lerna run build
 
+
+
 ## workspace Script
 - cd {yourPath}/mono 
 - "dml:build": "yarn workspace dml build",
@@ -62,7 +73,16 @@ Name         | Version    |
 
 ## TypeScript모듈 컴파일 
 - cd {yourPath}/mono/packages/type-utils
-- tsc 
+- tsc
+
+
+## docker 명령어
+ 실행중인 컨테이너 확인 : docker ps
+ 빌드된 이미지 확인 : docker images
+ 컨테이너 삭제 : docker rm {컨테이너명}
+ 이미지 삭제 : docker rmi {dockerid}
+ 도커 이미지 빌드 : docker build -f Dockerfile-dml-develop  -t mono-dml .
+ 도커 실행 : docker run --name "mono-dml" -d -p 21101:80 mono-dml
 
 
 ## refs
@@ -72,7 +92,7 @@ Name         | Version    |
 - tsconfig 옵션 설명 : https://typescript-kr.github.io/pages/tsconfig.json.html
 - 순수 컴포넌트 모듈 관련 : https://github.com/pixari/component-library-monorepo
 - ts Lerna : https://github.com/dz333333/vue-ts-ui
-
+- docker: https://www.daleseo.com/docker-run/
 ## CodeGen
 1. wget https://petstore.swagger.io/v2/swagger.json
 2. wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0-beta/openapi-generator-cli-5.0.0-beta.jar -O openapi-generator-cli.jar
@@ -83,7 +103,18 @@ Name         | Version    |
 
 
 ## 더 
+- storybook적용
+- husky Workspace Commit제한
 - esLint 공통화 (Typescript, vue)
-- packages/*, components/* save To build 
+- DockerFile Build 속도 개선
+- components/* 상대경로 적용
+- packages/*, components/* save To build ->완료  (2.22)
 - packages/* index.ts 전환 -> 완료 (2.15)
-- Git Publish 연동 Shell 
+- Git Publish 연동 Shell -> 완료 (2.23)
+
+
+
+## 확인된(설계자 메모 이해x)
+- export된 components/* single 컴포넌트에서 여러 컴포넌트 조합하여 applications/에 추가 
+- preBuild components/* / include Diff 확인
+- include된 모듈은 완전히 격리되는지 확인 
