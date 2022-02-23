@@ -77,12 +77,12 @@ C--yarn xxx:serve -->G([some your Project])
 
 
 ## docker 명령어
- 실행중인 컨테이너 확인 : docker ps
- 빌드된 이미지 확인 : docker images
- 컨테이너 삭제 : docker rm {컨테이너명}
- 이미지 삭제 : docker rmi {dockerid}
- 도커 이미지 빌드 : docker build -f Dockerfile-dml-develop  -t mono-dml .
- 도커 실행 : docker run --name "mono-dml" -d -p 21101:80 mono-dml
+ - 실행중인 컨테이너 확인 : docker ps
+ - 빌드된 이미지 확인 : docker images
+ - 컨테이너 삭제 : docker rm {컨테이너명}
+ - 이미지 삭제 : docker rmi {dockerid}
+ - 도커 이미지 빌드 : docker build -f Dockerfile-dml-develop  -t mono-dml .
+ - 도커 실행 : docker run --name "mono-dml" -d -p 21101:80 mono-dml
 
 
 ## refs
