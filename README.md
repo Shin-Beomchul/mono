@@ -29,6 +29,16 @@ Name         | Version    |
     ㄴ type-utils : 유틸 패키지(Pre Build)
 ~~~
 
+## 프로젝트 실행과정
+```mermaid
+graph LR
+A(Start) --lerna bootstrap --> B(모듈종속성 호이스팅) --lerna run build--> C(모듈Pre빌드)
+C--yarn dml:serve -->D([DML프로젝트실행])
+C--yarn dsv:serve-->E([DSV프로젝트실행])
+C--yarn search:serve -->F([comm-search프로젝트실행])
+C--yarn xxx:serve -->G([some your Project])
+```
+
 
 ## Repo Rules
   - applications/* 모듈간 의존하지 않아야 한다.
@@ -50,6 +60,8 @@ Name         | Version    |
 - npm install @vue/cli -g (@vue/cli 4.5.15 - Optional)
 - lerna bootstrap
 - lerna run build
+
+
 
 ## workspace Script
 - cd {yourPath}/mono 
@@ -84,6 +96,8 @@ Name         | Version    |
 
 ## 더 
 - esLint 공통화 (Typescript, vue)
-- packages/*, components/* save To build 
+- components/* 상대경로 적용
+- packages/*, components/* save To build ->완료  (2.22)
 - packages/* index.ts 전환 -> 완료 (2.15)
-- Git Publish 연동 Shell 
+- Git Publish 연동 Shell -> 완료 (2.23)
+
