@@ -25,10 +25,10 @@ Name         | Version    |
 ```mermaid
 graph LR
 A(Start) --lerna bootstrap --> B(모듈종속 호이스팅) --lerna run build--> C(모듈빌드all)
-C--yarn dml:serve -->D([DML프로젝트실행])
-C--yarn dsv:serve-->E([DSV프로젝트실행])
-C--yarn search:serve -->F([comm-search프로젝트실행])
-C--yarn xxx:serve -->G([some your Project])
+C--yarn serve:dml -->D([DML프로젝트실행])
+C--yarn serve:dsv-->E([DSV프로젝트실행])
+C--yarn serve:search -->F([comm-search프로젝트실행])
+C--yarn serve:xxx -->G([some your Project])
 ```
 
 ## Mono도입 의도
@@ -57,14 +57,14 @@ C--yarn xxx:serve -->G([some your Project])
 ## Execute
 - lerna bootstrap
 - lerna run build
-- yarn dml:serve
+- yarn serve:dml
 
 ## workspace Script
 - cd {yourPath}/mono 
-- "dml:build": "yarn workspace dml build",
-- "dml:serve": "yarn workspace dml serve",
-- "search:build": "yarn workspace @god/comm-search build",
-- "search:serve": "yarn workspace @god/comm-search serve"
+- "build:dml": "yarn workspace dml build",
+- "serve:dml": "yarn workspace dml serve",
+- "build:search": "yarn workspace @god/comm-search build",
+- "serve:search": "yarn workspace @god/comm-search serve"
 
 
 ## mono Repo 중 dml프로젝트 Docker 이미지 생성과정
