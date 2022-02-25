@@ -24,7 +24,7 @@ Name         | Version    |
 ## 프로젝트 실행과정
 ```mermaid
 graph LR
-A(Start) --lerna bootstrap --> B(모듈종속성 호이스팅) --lerna run build--> C(모듈Pre빌드)
+A(Start) --lerna bootstrap --> B(모듈종속 호이스팅) --lerna run build--> C(모듈Pre빌드)
 C--yarn dml:serve -->D([DML프로젝트실행])
 C--yarn dsv:serve-->E([DSV프로젝트실행])
 C--yarn search:serve -->F([comm-search프로젝트실행])
@@ -67,11 +67,11 @@ C--yarn xxx:serve -->G([some your Project])
 - "search:serve": "yarn workspace @god/comm-search serve"
 
 
-**mono Repo 중 dml프로젝트 Docker 이미지 생성과정**
+## mono Repo 중 dml프로젝트 Docker 이미지 생성과정
 ```mermaid
 graph LR
 A(repo/) --docker build -f Dockerfile-dml-develop --> B((Docker Build Start)) 
-B --lerna bootstrap--> C(모듈종속성 호이스팅) --lerna run build--> ALL(빌드all) 
+B --lerna bootstrap--> C(모듈종속 호이스팅) --lerna run build--> ALL(빌드all) 
 ALL --> D1(allications/dml/dist/*)
 ALL --> D2(allications/dsv/dist/*)
 ALL --> D3(allications/comm-components/dist/*)
