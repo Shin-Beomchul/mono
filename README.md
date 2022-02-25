@@ -6,13 +6,6 @@ Name         | Version    |
 `lerna`      | 4.0.0      |  
 `yarn`       | 1.22.17    |  
 `tsc`        | 4.5.4      |  
-
-
-
-## Mono도입 의도
- 1. 모듈별 격리 : 각 모듈들은 IDE를 통해 독립 실행 & 테스트 가능
- 2. 재사용 : 공통으로 사용하는 컴포넌트, 화면, 모듈화
-
  
  ## Mono프로젝트 구조.
 ~~~
@@ -28,7 +21,6 @@ Name         | Version    |
     ㄴ mock-service : MockService 패키지
     ㄴ type-utils : 유틸 패키지(Pre Build)
 ~~~
-
 ## 프로젝트 실행과정
 ```mermaid
 graph LR
@@ -39,7 +31,9 @@ C--yarn search:serve -->F([comm-search프로젝트실행])
 C--yarn xxx:serve -->G([some your Project])
 ```
 
-
+## Mono도입 의도
+ 1. 모듈별 격리 : 각 모듈들은 IDE를 통해 독립 실행 & 테스트 가능
+ 2. 재사용 : 공통으로 사용하는 컴포넌트, 화면, 모듈화
 ## Repo Rules
   - applications/* 모듈간 의존하지 않아야 한다.
   - components/* 모듈간 의존하지 않아야 한다.
@@ -48,19 +42,22 @@ C--yarn xxx:serve -->G([some your Project])
   - packages/*는 다른 workspace에서도 자유롭게 참조 가능.
   - components/*는 applications workspace에서만 참조.
 
+
+
 ## plugins
 - ESLint
 - Vetur
 
 ## installs
 - nvm use 16.14.0
-- npm install --global yarn (1.22.17)
-- npm install -g lerna(4.0.0)    
-- npm install @vue/cli -g (@vue/cli 4.5.15 - Optional)
+- npm install --global yarn@1.22.17
+- npm install -g lerna@4.0.0
+- npm install @vue/cli -g (@vue/cli 4.5.15 - Optional
+
+## Execute
 - lerna bootstrap
 - lerna run build
-
-
+- yarn dml:serve
 
 ## workspace Script
 - cd {yourPath}/mono 
@@ -70,10 +67,17 @@ C--yarn xxx:serve -->G([some your Project])
 - "search:serve": "yarn workspace @god/comm-search serve"
 
 
-
-## TypeScript모듈 컴파일 
-- cd {yourPath}/mono/packages/type-utils
-- tsc
+**mono Repo 중 dml프로젝트 Docker 이미지 생성과정**
+```mermaid
+graph LR
+A(repo/) --docker build -f Dockerfile-dml-develop --> B((Docker Build Start)) 
+B --lerna bootstrap--> C(모듈종속성 호이스팅) --lerna run build--> ALL(빌드all) 
+ALL --> D1(allications/dml/dist/*)
+ALL --> D2(allications/dsv/dist/*)
+ALL --> D3(allications/comm-components/dist/*)
+ALL --> DX(allications/.../dist/*)
+D1 --nginx home Copy-->E(Make Image)
+```
 
 
 ## docker 명령어
@@ -93,6 +97,7 @@ C--yarn xxx:serve -->G([some your Project])
 - 순수 컴포넌트 모듈 관련 : https://github.com/pixari/component-library-monorepo
 - ts Lerna : https://github.com/dz333333/vue-ts-ui
 - docker: https://www.daleseo.com/docker-run/
+- TypeScript모듈 컴파일 :  ex) cd {yourPath}/mono/packages/type-utils && tsc 
 ## CodeGen
 1. wget https://petstore.swagger.io/v2/swagger.json
 2. wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0-beta/openapi-generator-cli-5.0.0-beta.jar -O openapi-generator-cli.jar
@@ -106,15 +111,15 @@ C--yarn xxx:serve -->G([some your Project])
 - storybook적용
 - husky Workspace Commit제한
 - esLint 공통화 (Typescript, vue)
-- DockerFile Build 속도 개선
+- DockerFile Build 속도 개선(lerna/yarn docker Image, 선택적 copy )
 - components/* 상대경로 적용
 - packages/*, components/* save To build ->완료  (2.22)
 - packages/* index.ts 전환 -> 완료 (2.15)
 - Git Publish 연동 Shell -> 완료 (2.23)
 
 
-
-## 확인된(설계자 메모 이해x)
-- export된 components/* single 컴포넌트에서 여러 컴포넌트 조합하여 applications/에 추가 
-- preBuild components/* / include Diff 확인
+## 설계자 메모 이해x
 - include된 모듈은 완전히 격리되는지 확인 
+- export된 components/* single 컴포넌트에서 여러 컴포넌트 조합하여 applications/에 추가 
+- preBuild components/* <-> include Diff 확인
+
