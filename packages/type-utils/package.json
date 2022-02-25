@@ -18,7 +18,8 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "build:packages": "tsc"
   },
   "dependencies": {
     "axios": "^0.24.0"

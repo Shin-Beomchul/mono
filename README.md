@@ -70,13 +70,10 @@ C--yarn xxx:serve -->G([some your Project])
 ## mono Repo 중 dml프로젝트 Docker 이미지 생성과정
 ```mermaid
 graph TB
-A(repo/) --docker build -f Dockerfile-dml-develop --> B((Docker Build Start)) 
-B --lerna bootstrap--> C(모듈종속성 호이스팅) --lerna run build--> ALL(모듈빌드all) 
-ALL --> D1(allications/dml/dist/*)
-ALL --> D2(allications/dsv/dist/*)
-ALL --> D3(allications/comm-components/dist/*)
-ALL --> DX(allications/.../dist/*)
-D1 --nginx home Copy-->E(Docker Image)
+A(Docker Host: ../mono) --docker build -f Dockerfile-dml-develop --> B((Docker Build Start))
+B --lerna bootstrap--> C(모듈종속 호이스팅) --lerna  run  build:packages--> ALL(packages/* Build Complete)
+ALL --yarn  build:dml-->D2(applications/dml/dist/*)
+D2 --nginx Copy-->E(Docker Image)
 ```
 
 
@@ -119,6 +116,7 @@ D1 --nginx home Copy-->E(Docker Image)
 
 
 ## 설계자 메모 이해x
+- 기존 진행중이던 프로젝트 합류가 쉬워야 한다.
 - include된 모듈은 완전히 격리되는지 확인 
 - export된 components/* single 컴포넌트에서 여러 컴포넌트 조합하여 applications/에 추가 
 - preBuild components/* <-> include Diff 확인

@@ -10,10 +10,11 @@
     "lerna": "^4.0.0"
   },
   "scripts": {
-    "dml:build": "yarn workspace dml build",
-    "dml:serve": "yarn workspace dml serve",
+    "build:dml": "yarn workspace dml build",
+    "serve:dml": "yarn workspace dml serve",
 
-    "search:build": "yarn workspace @god/comm-search build",
-    "search:serve": "yarn workspace @god/comm-search serve"
+    "build:search": "yarn workspace @god/comm-search build",
+    "serve:search": "yarn workspace @god/comm-search serve"
+
   }
 }

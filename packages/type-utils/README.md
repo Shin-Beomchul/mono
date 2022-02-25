@@ -1,6 +1,6 @@
 # `type-utils`
 
->  TS 라이브러리 boilderplate (for Copy & paste)
+>  PreBuild TS 라이브러리 boilderplate (for Copy & paste)
 
 ## Usage
 - Applications/someApp
