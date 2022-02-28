@@ -106,12 +106,12 @@ D2 --nginx Copy-->E(Docker Image)
  ## Husky Rules
 - 공통 개발자 외에 공통 workspace 커밋을 제한.(사람에 실수 까지도 시스템이 제한)
 - 필요한 경우 일반 개발자도 쉽게 커밋제한을 해제 할 수 있어야 한다. 
+```
 // {yourPath}/mono/.husky/pre-commit
 readonly COMM_OWNER_HOST_NAMES=("godBeomPC") // 기존
-readonly COMM_OWNER_HOST_NAMES=("godBeomPC", commDeveloperPC) // 추가
-```sh
 >> whoami
 commDeveloperPC
+readonly COMM_OWNER_HOST_NAMES=("godBeomPC", commDeveloperPC) // 추가
 ```
 
 
