@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <img alt="Vue logo" src="../assets/logo.png" />
-        <CommComponent msg="공통 컴포넌트 모듈 (comm-components)" />
+        <CommComponent msg="공통 컴포넌트 모듈 (comm-components!)" />
         <comm-footer></comm-footer>
     </div>
 </template>

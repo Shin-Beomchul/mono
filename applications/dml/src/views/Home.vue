@@ -12,8 +12,8 @@ import { defineComponent } from "vue";
 import { MockService, MockAPIMode } from "@god/mock-service";
 import { sayHello } from "@god/type-utils";
 import { HelloTypeClass } from "@god/type-utils";
-import { CommGnb, CommFooter } from "@god/comm-components";
-import { CommSearch } from "@god/comm-search";
+import { CommGnb, CommFooter } from "@god/comm-components"; /* @god/@comm-components */
+import { CommSearch } from "@god/comm-search"; /* @@god/comm-search */
 
 export default defineComponent({
     components: {

@@ -41,26 +41,29 @@ C--yarn serve:xxx -->G([some your Project])
 
   - packages/*는 다른 workspace에서도 자유롭게 참조 가능.
   - components/*는 applications workspace에서만 참조.
-
-
+  - 각모듈은 서로 내부에서 어떤일이 일어나는지 알수 없어야 한다.
 
 ## plugins
 - ESLint
 - Vetur
 
 ## installs
+```sh
 - nvm use 16.14.0
 - npm install --global yarn@1.22.17
 - npm install -g lerna@4.0.0
 - npm install @vue/cli -g (@vue/cli 4.5.15 - Optional
+```
 
 ## Execute
+```sh
 - lerna bootstrap
 - lerna run build
 - yarn serve:dml
+```
 
 ## workspace Script
-- cd {yourPath}/mono 
+- cd {yourPath}/mono
 - "build:dml": "yarn workspace dml build",
 - "serve:dml": "yarn workspace dml serve",
 - "build:search": "yarn workspace @god/comm-search build",
@@ -85,6 +88,33 @@ D2 --nginx Copy-->E(Docker Image)
  - 도커 이미지 빌드 : docker build -f Dockerfile-dml-develop  -t mono-dml .
  - 도커 실행 : docker run --name "mono-dml" -d -p 21101:80 mono-dml
 
+## husky 
+ ```sh
+ // installs
+ yarn add husky -W -D
+
+ // enableHusky
+ npx husky install 
+
+// package.json
+ "scripts": {
+    "prepare": "husky install"
+    //"postinstall": "husky install && cp -a .husky/. .git/hooks/" // if use GitKraken
+  }
+ ```
+
+ ## Husky Rules
+- 공통 개발자 외에 공통 workspace 커밋을 제한.(사람에 실수 까지도 시스템이 제한)
+- 필요한 경우 일반 개발자도 쉽게 커밋제한을 해제 할 수 있어야 한다. 
+// {yourPath}/mono/.husky/pre-commit
+readonly COMM_OWNER_HOST_NAMES=("godBeomPC") // 기존
+readonly COMM_OWNER_HOST_NAMES=("godBeomPC", commDeveloperPC) // 추가
+```sh
+>> whoami
+commDeveloperPC
+```
+
+
 
 ## refs
 - lerna with yarn 정리 : https://awesomezero.com/development/lerna_and_yarn_workspace/
@@ -95,18 +125,16 @@ D2 --nginx Copy-->E(Docker Image)
 - ts Lerna : https://github.com/dz333333/vue-ts-ui
 - docker: https://www.daleseo.com/docker-run/
 - TypeScript모듈 컴파일 :  ex) cd {yourPath}/mono/packages/type-utils && tsc 
+- husky : https://library.gabia.com/contents/8492/
 ## CodeGen
 1. wget https://petstore.swagger.io/v2/swagger.json
 2. wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0-beta/openapi-generator-cli-5.0.0-beta.jar -O openapi-generator-cli.jar
 3. java -jar openapi-generator-cli.jar generate  -i swagger.json -o api-client -g typescript-axios 
 
-## husky 
- https://library.gabia.com/contents/8492/
-
 
 ## 더 
 - storybook적용
-- husky Workspace Commit제한
+- husky Workspace Commit제한 -> 완료(2.28) comm-workspaces Owners(COMM_OWNER_HOST_NAMES)가 아닌자가 커밋을 시도 할 경우 Commit FailBack 
 - esLint 공통화 (Typescript, vue)
 - DockerFile Build 속도 개선(lerna/yarn docker Image, 선택적 copy )
 - components/* 상대경로 적용
@@ -117,7 +145,7 @@ D2 --nginx Copy-->E(Docker Image)
 
 ## 설계자 메모 이해x
 - 기존 진행중이던 프로젝트 합류가 쉬워야 한다.
-- include된 모듈은 완전히 격리되는지 확인 
+- include된 모듈은 완전히 격리되는지 확인 -> (preBuild완전격리 O, include X : 부모모듈 컴파일 종속)
 - export된 components/* single 컴포넌트에서 여러 컴포넌트 조합하여 applications/에 추가 
 - preBuild components/* <-> include Diff 확인
 

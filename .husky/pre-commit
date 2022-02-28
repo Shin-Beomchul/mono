@@ -1,0 +1,56 @@
+#!/bin/sh
+
+# 목적 : 사람에 실수도 시스템이 제한 할 수 있어야 한다. => 지정된 공통 개발자 외 공통 워크스페이스 커밋 제한 (weak limit)
+# weak limit? : 불편함을 통한 제한. 휴면 에러 방지용
+
+# ====Declarations====
+. "$(dirname "$0")/_/husky.sh"
+readonly COMM_OWNER_HOST_NAMES=("osstemapple" "godBeom")
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+# ====Declarations====
+
+
+# ====Start Of Script====
+readonly COMMIT_FILES="$(git diff --cached --name-only --diff-filter=ACM)"
+for commitFile in ${COMMIT_FILES[@]}
+  do
+    if [[ "$commitFile" == *components/* ]] || [[ "$commitFile" == *packages/* ]]; then
+       for hostName in ${COMM_OWNER_HOST_NAMES[@]}
+            do
+                commiterHost=$(whoami)
+                if [[ "$commiterHost" == "$hostName" ]]; then
+                    echo "${GREEN}공통개발자 호스트명 확인됨 => 커밋허용 ${NC}"
+                    exit 0;
+                else 
+                    echo "${RED} comm workspaces(components/*, *packages/*)에 커밋권한 없음 => 커밋제한 ${NC}"
+                    echo "${GREEN} $COMMIT_FILES ${NC}"
+                    exit 1;
+                fi
+            done
+    fi
+  done
+# ====End Of Script====
+
+
+# echo "dirname => $0"
+# readonly hook_name="$(basename "$0")"
+# echo "hook_name => $hook_name"
+# branch_name=`git rev-parse --abbrev-ref HEAD`
+# echo "branch_name1 => $branch_name"
+# echo "branch_name2" $(git branch --show-current)
+# echo "USER(hostPC) => $USER"
+# echo "whoami => $(whoami)"
+
+
+#==Color Table==
+# Black        0;30     Dark Gray     1;30
+# Red          0;31     Light Red     1;31
+# Green        0;32     Light Green   1;32
+# Brown/Orange 0;33     Yellow        1;33
+# Blue         0;34     Light Blue    1;34
+# Purple       0;35     Light Purple  1;35
+# Cyan         0;36     Light Cyan    1;36
+# Light Gray   0;37     White         1;37

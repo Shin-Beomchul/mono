@@ -7,14 +7,15 @@
     "packages/*"
   ],
   "devDependencies": {
+    "husky": "^7.0.4",
     "lerna": "^4.0.0"
   },
   "scripts": {
     "build:dml": "yarn workspace dml build",
     "serve:dml": "yarn workspace dml serve",
-
     "build:search": "yarn workspace @god/comm-search build",
-    "serve:search": "yarn workspace @god/comm-search serve"
-
+    "serve:search": "yarn workspace @god/comm-search serve",
+    "prepare": "husky install",
+    "postinstall": "husky install && rm -rf .git/hooks && ln -s ../.husky .git/hooks"
   }
 }
