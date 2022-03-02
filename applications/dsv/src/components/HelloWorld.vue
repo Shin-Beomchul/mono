@@ -1,19 +1,21 @@
 <template>
-    <div>
-        <button>검색</button>
+    <div class="hello">
+        <h1>{{ msg }}</h1>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
 export default defineComponent({
-    name: "SearchButton",
+
+    name: "HelloWorld",
+    props: {
+        msg: String,
+    },
 });
 </script>
 
 <style scoped lang="scss">
-#comm-footer {
- background: #b94248;
-}
 
 </style>

@@ -1,1 +1,0 @@
-## 서비스 프로젝트 Schaffold ME!
