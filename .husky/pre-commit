@@ -43,6 +43,7 @@ for commitFile in ${COMMIT_FILES[@]}
 # echo "branch_name2" $(git branch --show-current)
 # echo "USER(hostPC) => $USER"
 # echo "whoami => $(whoami)"
+# echo  GIT_PARAMS="$*"
 
 
 #==Color Table==
