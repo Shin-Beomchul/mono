@@ -7,7 +7,6 @@ import { MockAPIMode, Values } from "./NetworkTypes";
  */
 class MockService {
     /**
-     *
      * @param serviceMode FAST(지연없음), REAL(실제 http요청), WOST(2초 후 http응답)
      * @returns
      */
