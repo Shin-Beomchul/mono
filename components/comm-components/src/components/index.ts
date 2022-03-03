@@ -1,5 +1,6 @@
-export * from "./layout";
-
-import CommComponent from "./CommComponent.vue";
-export { CommComponent };
+// export * from "./layout";
+import CommGnb from "./layout/CommGnb.vue";
+import CommFooter from "./layout/CommFooter.vue";
+import MembersLogin from "./MembersLogin.vue";
+export { CommGnb, CommFooter, MembersLogin };
 

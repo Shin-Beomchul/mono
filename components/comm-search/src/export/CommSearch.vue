@@ -1,8 +1,8 @@
 <template>
     <div id="comm-search-container">
         <h1>{{ msg }}</h1>
-        <span>공통 통합검색 페이지 컴포넌트</span>
-        <search-button></search-button>
+        <input/> <search-button></search-button>
+        <div>공통 통합검색 페이지 컴포넌트</div>
     </div>
 </template>
 

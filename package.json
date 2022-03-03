@@ -13,6 +13,8 @@
   "scripts": {
     "build:dml": "yarn workspace dml build",
     "serve:dml": "yarn workspace dml serve",
+    "build:dsv": "yarn workspace dsv build",
+    "serve:dsv": "yarn workspace dsv serve",
     "build:search": "yarn workspace @god/comm-search build",
     "serve:search": "yarn workspace @god/comm-search serve",
     "prepare": "husky install",

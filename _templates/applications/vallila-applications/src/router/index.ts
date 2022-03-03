@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
-
+import { CommSearch } from "@god/comm-search"; /* @@god/comm-search */
+import { MembersLogin } from "@god/comm-components";
 const routes: Array<RouteRecordRaw> = [
     {
         path: "/",
@@ -9,12 +10,15 @@ const routes: Array<RouteRecordRaw> = [
     },
     {
         path: "/comm-search",
-        name: "About",
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
+        name: "comm-search",
         component: () =>
-            import(/* webpackChunkName: "about" */ "../views/About.vue"),
+            CommSearch,
+    },
+    {
+        path: "/login",
+        name: "login",
+        component: () =>
+            MembersLogin,
     },
 ];
 

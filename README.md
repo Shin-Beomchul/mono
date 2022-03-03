@@ -45,10 +45,12 @@ C--yarn serve:xxx -->G([some your Project])
   - 가능한 preBuild모듈타입을 지향하여 개발한다.   
 
 ## 모듈타입
- - PreBuild : 모듈에서 사전 빌드되어 바닐라 js 형태로 빌드. 프레임워크에 종속적이지 않음.
- - Include : 부모 프로젝트에 코드가 추가 되어 부모에서 빌드됨. 프레임워크에 종속적일 수 있음. 
-    ex)components/quassar/q-btn을 dml에서 사용 시 빌드 불가. dml은 quassar 프레임워크를 사용하지 않으므로 quassar 컴파일 불가. 
 
+ - PreBuild : 모듈에서 사전 빌드되어 바닐라 js 형태로 빌드. 프레임워크에 종속적이지 않음.
+ - Include : 부모 프로젝트에 코드가 추가 되어 부모에서 빌드됨. 프레임워크에 종속적일 수 있음.
+```
+    ex) components/quassar/q-btn을 dml에서 사용 시 빌드 불가. dml은 quassar 프레임워크를 사용하지 않으므로 quassar 컴파일 불가. 
+```
 ## plugins
 - ESLint
 - Vetur
@@ -89,8 +91,8 @@ D2 --nginx Copy-->E(Docker Image)
 ## docker 명령어
  - 실행중인 컨테이너 확인 : docker ps
  - 빌드된 이미지 확인 : docker images
- - 컨테이너 삭제 : docker rm {컨테이너명}
- - 이미지 삭제 : docker rmi {dockerid}
+ - 컨테이너 삭제 : docker rm { 컨테이너명 }
+ - 이미지 삭제 : docker rmi { dockerid }
  - 도커 이미지 빌드 : docker build -f Dockerfile-dml-develop  -t mono-dml .
  - 도커 실행 : docker run --name "mono-dml" -d -p 21101:80 mono-dml
 
@@ -123,6 +125,7 @@ readonly COMM_OWNER_HOST_NAMES=("godBeomPC", "commDeveloperPC") // 추가
 
 
 ## refs
+- proxy : https://blog.naver.com/PostView.naver?blogId=minhyupp&logNo=222114121784&parentCategoryNo=&categoryNo=47&viewDate=&isShowPopularPosts=true&from=search
 - lerna with yarn 정리 : https://awesomezero.com/development/lerna_and_yarn_workspace/
 - 플러그인 : https://velog.io/@skyepodium/%EB%82%B4-%EC%B5%9C%EC%95%A0-VS-Code-%ED%99%95%EC%9E%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8
 - tsconfig 이해1 : https://velog.io/@sooran/tsconfig.json-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EC%95%8C%EA%B3%A0-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0

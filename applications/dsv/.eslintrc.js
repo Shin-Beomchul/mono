@@ -7,7 +7,6 @@ module.exports = {
     "plugin:vue/vue3-essential",
     "eslint:recommended",
     "@vue/typescript/recommended",
-    // "@vue/prettier",
     "@vue/prettier/@typescript-eslint",
   ],
   parserOptions: {
@@ -18,7 +17,6 @@ module.exports = {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     "vue/no-multiple-template-root": 0,
-    // "vue/prettier": "error",
     'semi': [ 'error', 'always' ], // 세미콜론 허용여부
     'semi-spacing': [ 'error', { 'before': false, 'after': true }], // 세미콜론 빈공간 허용 여부 - https://eslint.org/docs/rules/semi-spacing
     'space-before-blocks': 'error', // block 이전 빈공간
@@ -34,11 +32,6 @@ module.exports = {
         'singleline': 'never',
         'multiline': 'never'
     }],
-    // 'vue/html-closing-bracket-spacing': [ 'error', { // tag 사이에 빈 공간 허용안함 - https://eslint.vuejs.org/rules/html-closing-bracket-spacing.html
-    //     'startTag': 'never',
-    //     'endTag': 'never',
-    //     'selfClosingTag': 'never'
-    // }],
     '@typescript-eslint/no-unused-vars': [ 'warn' ], // 미사용 변수 사용 시 에러 - https://github.com/typescript-eslint/typescript-eslint/blob/v2.34.0/packages/eslint-plugin/docs/rules/no-unused-vars.md
     '@typescript-eslint/camelcase': 'off',
     'no-unused-vars': 'off',

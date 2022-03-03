@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <span>
         <button>검색</button>
-    </div>
+    </span>
 </template>
 
 <script lang="ts">

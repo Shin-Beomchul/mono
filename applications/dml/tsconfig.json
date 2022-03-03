@@ -11,6 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "noImplicitAny": false, //any타입 금지 여부
     "types": [
       "webpack-env",
       "mocha",

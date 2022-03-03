@@ -1,21 +1,18 @@
 <template>
     <div class="home">
         <img alt="Vue logo" src="../assets/logo.png" />
-        <CommComponent msg="공통 컴포넌트 모듈 (comm-components!)" />
-        <comm-footer></comm-footer>
+        <members-login></members-login>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import CommComponent from "@/components/CommComponent.vue"; // @ is an alias to /src
-import CommFooter from "@/components/layout/CommFooter.vue";
+import MembersLogin from "@/components/MembersLogin.vue";
 
 export default defineComponent({
     name: "Home",
     components: {
-        CommComponent,
-        CommFooter
+        MembersLogin
     },
 });
 </script>
