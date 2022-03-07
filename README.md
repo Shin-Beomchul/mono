@@ -14,12 +14,15 @@ Name         | Version    |
     ㄴ dsv : 서비스 프로젝트
 
 --components
+
     ㄴ comm-components : 공통 컴포넌트
     ㄴ comm-search : 통합검색 컴포넌트
 
 --packages
+    ㄴ lru-cache : LruCache 패키지
     ㄴ mock-service : MockService 패키지
     ㄴ type-utils : 유틸 패키지(Pre Build)
+    
 ~~~
 ## 프로젝트 실행과정
 ```mermaid
