@@ -16,8 +16,6 @@
     "build:dsv": "yarn workspace dsv build",
     "serve:dsv": "yarn workspace dsv serve",
     "build:search": "yarn workspace @god/comm-search build",
-    "serve:search": "yarn workspace @god/comm-search serve",
-    "prepare": "husky install",
-    "postinstall": "husky install && rm -rf .git/hooks && ln -s ../.husky .git/hooks"
+    "serve:search": "yarn workspace @god/comm-search serve"
   }
 }
