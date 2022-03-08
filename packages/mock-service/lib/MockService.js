@@ -1,6 +1,14 @@
 import axios from "axios";
 import { MockAPIMode } from "./NetworkTypes";
+/**
+ * @author Shin BeomChul
+ * @since 2022.03.02
+ */
 class MockService {
+    /**
+     * @param serviceMode FAST(지연없음), REAL(실제 http요청), WOST(2초 후 http응답)
+     * @returns
+     */
     async getMockAxiosResponse(serviceMode = MockAPIMode.FAST) {
         switch (serviceMode) {
             case MockAPIMode.FAST: return this.fakeHttpLatencyMock();

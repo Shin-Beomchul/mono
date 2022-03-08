@@ -5,7 +5,7 @@ Name         | Version    |
 `Node`       | 16.14.0    |  
 `lerna`      | 4.0.0      |  
 `yarn`       | 1.22.17    |  
-`tsc`        | 4.5.4      |  
+`tsc`        | 4.5.4      |
  
  ## Mono프로젝트 구조.
 ~~~
@@ -14,7 +14,6 @@ Name         | Version    |
     ㄴ dsv : 서비스 프로젝트
 
 --components
-
     ㄴ comm-components : 공통 컴포넌트
     ㄴ comm-search : 통합검색 컴포넌트
 
@@ -146,6 +145,8 @@ readonly COMM_OWNER_HOST_NAMES=("godBeomPC", "commDeveloperPC") // 추가
 
 
 ## 더 
+- zero-install 적용
+- yarn2 berry Plugin적용
 - storybook적용
 - husky Workspace Commit제한 -> 완료(2.28) comm-workspaces Owners(COMM_OWNER_HOST_NAMES)가 아닌자가 커밋을 시도 할 경우 Commit FailBack 
 - esLint 공통화 (Typescript, vue)
