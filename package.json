@@ -11,10 +11,14 @@
     "lerna": "^4.0.0"
   },
   "scripts": {
-    "build:dml": "yarn workspace dml build",
-    "serve:dml": "yarn workspace dml serve",
-    "build:dsv": "yarn workspace dsv build",
-    "serve:dsv": "yarn workspace dsv serve",
+    "serve:apps": "lerna run --scope @app/* --parallel serve",
+    
+    "build:dml": "yarn workspace @app/dml build",
+    "serve:dml": "yarn workspace @app/dml serve",
+
+    "build:dsv": "yarn workspace @app/dsv build",
+    "serve:dsv": "yarn workspace @app/dsv serve",
+
     "build:search": "yarn workspace @god/comm-search build",
     "serve:search": "yarn workspace @god/comm-search serve"
   }
