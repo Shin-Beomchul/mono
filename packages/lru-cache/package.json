@@ -8,8 +8,8 @@
     ],
     "author": "BeomChul <sbc0830g@gmail.com>",
     "license": "ISC",
-    "main": "lib/index.js",
-    "types": "lib/index.d.js",
+    "main": "dist/index.js",
+    "types": "dist/index.d.js",
     "files": [
       "lib"
     ],

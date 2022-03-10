@@ -9,9 +9,9 @@
  *     ...
  * */
 export interface CacheStorage {
-    set(key: string, value: any): boolean;
-    get(key: string): any | undefined;
-    del(key: string): void;
-    has(key: string): boolean;
-    reset(): any;
+  set(key: string, value: any): boolean;
+  get(key: string): any | undefined;
+  del(key: string): void;
+  has(key: string): boolean;
+  reset(): any;
 }

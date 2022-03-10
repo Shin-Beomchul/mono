@@ -1,0 +1,5 @@
+{
+  "*.{js,ts,vue}": [
+    "npx vue-cli-service lint"
+  ]
+}

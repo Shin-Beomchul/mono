@@ -8,28 +8,28 @@ import { CacheStorage } from "./CacheStorage";
  * @scope 도메인간 공유 but, 서브도메인 공유 x
  */
 export default class CacheStorageOfLocal implements CacheStorage {
-    constructor() {
-        console.log("create CacheStorage Of Local");
-    }
+  constructor() {
+    console.log("create CacheStorage Of Local");
+  }
 
-    set(key: string, value: any): boolean {
-        localStorage.setItem(key, JSON.stringify(value));
-        return true;
+  set(key: string, value: any): boolean {
+    localStorage.setItem(key, JSON.stringify(value));
+    return true;
+  }
+  get(key: string) {
+    const objectJson: string | null = localStorage.getItem(key);
+    if (objectJson != null) {
+      return JSON.parse(objectJson);
     }
-    get(key: string) {
-        const objectJson: string | null = localStorage.getItem(key);
-        if (objectJson != null) {
-            return JSON.parse(objectJson);
-        }
-        return undefined;
-    }
-    del(key: string): void {
-        localStorage.removeItem(key);
-    }
-    has(key: string): boolean {
-        return localStorage.getItem(key) != null ? true : false;
-    }
-    reset() {
-        localStorage.clear();
-    }
+    return undefined;
+  }
+  del(key: string): void {
+    localStorage.removeItem(key);
+  }
+  has(key: string): boolean {
+    return localStorage.getItem(key) != null ? true : false;
+  }
+  reset() {
+    localStorage.clear();
+  }
 }
