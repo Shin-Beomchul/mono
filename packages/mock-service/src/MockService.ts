@@ -10,9 +10,9 @@ class MockService {
      * @param serviceMode FAST(지연없음), REAL(실제 http요청), WOST(2초 후 http응답)
      * @returns
      */
-    public async getMockAxiosResponse(serviceMode: Values<typeof MockAPIMode> = MockAPIMode.FAST): Promise<AxiosResponse<any>> {
+    public async getMockAxiosResponse(serviceMode:Values< typeof MockAPIMode> = MockAPIMode.FAST): Promise<AxiosResponse<any > > {
         switch (serviceMode) {
-        case MockAPIMode.FAST:return this.fakeHttpLatencyMock();
+        case MockAPIMode.FAST: return this.fakeHttpLatencyMock();
         case MockAPIMode.WORST: return this.worstHttpLatencyMock();
         case MockAPIMode.REAL: return this.realHttpLatencyMock();
         default:

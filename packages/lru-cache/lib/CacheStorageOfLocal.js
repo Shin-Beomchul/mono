@@ -3,7 +3,7 @@
  * @author Shin BeomChul
  * @since 21.12.09
  *
- * @scope session
+ * @scope 도메인간 공유 but, 서브도메인 공유 x
  */
 export default class CacheStorageOfLocal {
     constructor() {

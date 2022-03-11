@@ -7,11 +7,6 @@ import { PresitentType } from "./PresitentType";
  * @since 21.12.09
  */
 export default class PersistentLruCache {
-    // constructor(cacheStorage: CacheStorage, options: { max: number }) {
-    //     this.CAPACITY = options.max;
-    //     this.savedKeys = cacheStorage.get("cacheSavedKeys") as string[] || [];
-    //     this.cacheStorage = cacheStorage;
-    // }
     constructor(presitentType, options) {
         this.savedKeys = [];
         this.CAPACITY = options.max;
