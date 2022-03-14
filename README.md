@@ -26,11 +26,11 @@ Name         | Version    |
 ## 프로젝트 실행과정
 ```mermaid
 graph LR
-A(Start) --lerna bootstrap --> B(모듈종속 호이스팅) --lerna run build--> C(모듈빌드all)
-C--yarn serve:dml -->D([DML프로젝트실행])
-C--yarn serve:dsv-->E([DSV프로젝트실행])
-C--yarn serve:search -->F([comm-search프로젝트실행])
-C--yarn serve:xxx -->G([some your Project])
+A(Start) --lerna bootstrap --> B(모듈종속 호이스팅) --build:packages--> C(packages빌드)--build:components--> CC(preBuild 컴포넌트 빌드)
+CC--yarn serve:dml -->D([DML프로젝트실행])
+CC--yarn serve:dsv-->E([DSV프로젝트실행])
+CC--yarn serve:search -->F([comm-search프로젝트실행])
+CC--yarn serve:xxx -->G([some your Project])
 ```
 
 ## Mono도입 의도
