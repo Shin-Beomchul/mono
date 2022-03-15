@@ -1,7 +1,7 @@
 {
   "name": "@god/comm-components",
   "version": "0.1.1",
-  "main": "src/export/index.ts",
+  "main": "src/exposes/index.ts",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

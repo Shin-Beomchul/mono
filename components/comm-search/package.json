@@ -9,7 +9,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:components": "vue-cli-service build --target lib --name comm-search ./src/export/index.ts",
+    "build:components": "vue-cli-service build --target lib --name comm-search ./src/exposes/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"

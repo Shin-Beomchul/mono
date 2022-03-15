@@ -36,7 +36,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "types/JwtToken.ts"  ],
   "exclude": [
     "node_modules"
   ]

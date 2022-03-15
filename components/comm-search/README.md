@@ -1,34 +1,43 @@
-# dml
+# comm-search (PreBuild Component)
 
-## Project setup
+
+## 격리 실행 & 개발.
 ```
 yarn install
-```
-
-### Compiles and hot-reloads for development
-```
 yarn serve
 ```
 
-### Compiles and minifies for production
+## 타 프로젝트에서 사용 방법.
+
+### components Compile
 ```
-yarn build
+yarn build:components
+```
+### 의존하고 있는 프로젝트 내용반영
+
+#### 의존성 추가
+```
+"dependencies": {
+    "@god/comm-search": "^0.1.0"
+}
 ```
 
-### Run your unit tests
+#### hoisting
 ```
-yarn test:unit
-```
-
-### Run your end-to-end tests
-```
-yarn test:e2e
+lerna bootsrap
 ```
 
-### Lints and fixes files
-```
-yarn lint
+### @app/*에서 사용.
+```typescript
+
+import { SearchButton, CommSearch } from "@god/comm-search";
+ 
+ ...
+
+components: {
+    SearchButton,
+    CommSearch,
+}
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+

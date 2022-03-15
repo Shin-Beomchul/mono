@@ -12,11 +12,13 @@
 </template>
 
 <script lang="ts">
+import { SearchButton, CommSearch } from "@god/comm-search"; /* @@god/comm-search */
 import { defineComponent } from "vue";
 import { CommGnb, CommFooter, JwtToken } from "@god/comm-components";
 import { MockService, MockAPIMode } from "@god/mock-service";
 import { sayHello } from "@god/type-utils";
 import { HelloTypeClass } from "@god/type-utils";
+
 import { PersistentLruCache, PresitentType } from "@god/lru-cache";
 import router from "@/router";
 export default defineComponent({
@@ -34,6 +36,9 @@ export default defineComponent({
         };
     },
     created() {
+
+        console.log("SearchButton", SearchButton);
+        console.log("CommSearch", CommSearch);
         /* @god/lru-cache*/
         let persistentLruCache = new PersistentLruCache(PresitentType.Local, { max: 30 });
         persistentLruCache.setStorage("key", "hello");

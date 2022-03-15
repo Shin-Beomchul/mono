@@ -1,5 +1,28 @@
-# dml
+# comm-components (Include Component)
 
+
+@App/*
+
+```typescript
+
+import { CommGnb, CommFooter, JwtToken } from "@god/comm-components";
+ 
+ ...
+
+components: {
+    CommGnb,
+    CommFooter,
+}
+
+...
+
+data() {
+    return {
+        jwtToken: {} as JwtToken // type
+    };
+}
+
+```
 ## Project setup
 ```
 yarn install
