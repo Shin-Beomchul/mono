@@ -1,27 +1,24 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Home from "../views/Home.vue";
 import { CommSearch } from "@god/comm-search"; /* @@god/comm-search */
 import { MembersLogin } from "@god/comm-components";
 const routes: Array<RouteRecordRaw> = [
     {
         path: "/",
         name: "Home",
-        component: Home,
+        component: () => import("@/views/Home.vue"),
     },
     {
         path: "/comm-search",
         name: "comm-search",
-        component: () =>
-            CommSearch,
+        component: CommSearch
     },
     {
         path: "/login",
         name: "login",
-        component: () =>
-            MembersLogin,
+        component: MembersLogin
+
     },
 ];
-
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes,
