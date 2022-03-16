@@ -5,7 +5,7 @@
 
 # ====Declarations====
 . "$(dirname "$0")/_/husky.sh"
-readonly COMM_OWNER_HOST_NAMES=("osstemapple" "godBeom")
+readonly COMM_OWNER_HOST_NAMES=("osstemapple" "godBeom" "god")
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -20,16 +20,16 @@ for commitFile in ${COMMIT_FILES[@]}
     if [[ "$commitFile" == *components/* ]] || [[ "$commitFile" == *packages/* ]]; then
        for hostName in ${COMM_OWNER_HOST_NAMES[@]}
             do
+                      echo $hostName
                 commiterHost=$(whoami)
                 if [[ "$commiterHost" == "$hostName" ]]; then
                     echo "${GREEN}공통개발자 호스트명 확인됨 => 커밋허용 ${NC}"
                     exit 0;
-                else 
-                    echo "${RED} comm workspaces(components/*, *packages/*)에 커밋권한 없음 => 커밋제한 ${NC}"
-                    echo "${GREEN} $COMMIT_FILES ${NC}"
-                    exit 1;
                 fi
-            done
+            done       
+        echo "${RED} comm workspaces(components/*, *packages/*)에 커밋권한 없음 => 커밋제한 ${NC}"
+        echo "${GREEN} $COMMIT_FILES ${NC}"
+        exit 1;
     fi
   done
 # ====End Of Script====
