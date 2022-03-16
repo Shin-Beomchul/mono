@@ -20,7 +20,8 @@ export default class PersistentLruCache {
             default:
                 this.cacheStorage = new CacheStorageOfSession();
         }
-        this.savedKeys = this.cacheStorage.get("cacheSavedKeys") || [];
+        this.savedKeys =
+            this.cacheStorage.get("cacheSavedKeys") || [];
     }
     switch(cacheStorage) {
         this.cacheStorage = cacheStorage;
@@ -80,7 +81,7 @@ export default class PersistentLruCache {
         this.cacheStorage.del(key);
     }
     clearCaches() {
-        this.savedKeys.forEach(key => this.cacheStorage.del(key));
+        this.savedKeys.forEach((key) => this.cacheStorage.del(key));
         this.savedKeys = [];
         this.cacheStorage.set("cacheSavedKeys", this.savedKeys);
     }

@@ -4,4 +4,10 @@ import CacheStorageOfSession from "./CacheStorageOfSession";
 import PersistentLruCache from "./PersistentLruCache";
 import { PresitentType } from "./PresitentType";
 
-export { CacheStorage, CacheStorageOfLocal, CacheStorageOfSession, PersistentLruCache, PresitentType };
+export {
+  CacheStorage,
+  CacheStorageOfLocal,
+  CacheStorageOfSession,
+  PersistentLruCache,
+  PresitentType,
+};

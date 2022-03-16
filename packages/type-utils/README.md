@@ -1,9 +1,11 @@
 # `type-utils`
 
->  PreBuild TS 라이브러리 boilderplate (for Copy & paste)
+> PreBuild TS 라이브러리 boilderplate (for Copy & paste)
 
 ## Usage
+
 - Applications/someApp
+
 ```
 import { sayHello } from "@god/type-utils";
 import { HelloTypeClass } from "@god/type-utils";

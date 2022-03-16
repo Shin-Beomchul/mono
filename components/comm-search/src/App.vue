@@ -1,9 +1,9 @@
 <template>
-    <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/search">통합검색 컴포넌트</router-link>
-    </div>
-    <router-view />
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/search">통합검색 컴포넌트</router-link>
+  </div>
+  <router-view />
 </template>
 
 <style lang="scss">

@@ -1,4 +1,4 @@
 export enum PresitentType {
-    Local = "Local",
-    Session = "Session",
+  Local = "Local",
+  Session = "Session",
 }
