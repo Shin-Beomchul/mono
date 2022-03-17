@@ -49,11 +49,12 @@ CC--yarn serve:xxx -->G([some your Project])
  - PreBuild : 모듈에서 사전 빌드되어 바닐라 js 형태로 빌드. 프레임워크에 종속적이지 않음.
  - Include : 부모 프로젝트에 코드가 추가 되어 부모에서 빌드됨. 프레임워크에 종속적일 수 있음.
 ```
-    ex) components/quassar/q-btn을 dml에서 사용 시 빌드 불가. dml은 quassar 프레임워크를 사용하지 않으므로 quassar 컴파일 불가. 
+ex) components/quassar/q-btn을 dml에서 사용 시 빌드 불가. dml은 quassar 프레임워크를 사용하지 않으므로 quassar 컴파일 불가. 
 ```
 ## plugins
 - ESLint
 - Vetur
+- Prettier
 
 ## installs
 ```sh
