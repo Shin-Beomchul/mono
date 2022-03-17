@@ -10,9 +10,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@god/lru-cache": "^1.0.0",
-    "@god/comm-search": "^0.1.0",
     "@god/comm-components": "^0.1.1",
+    "@god/comm-search": "^0.1.0",
+    "@god/lru-cache": "^1.0.0",
     "@god/mock-service": "^1.0.1",
     "@god/type-utils": "^1.0.1",
     "core-js": "^3.6.5",

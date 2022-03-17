@@ -112,7 +112,6 @@ E --docker run --name 'mono-dml' -d -p 21101:80 mono-dml-->FI(컨테이너 적�
     //"postinstall": "husky install && cp -a .husky/. .git/hooks/" // if use GitKraken
   }
  ```
-
  ## Husky Rules
 - 공통 개발자 외에 공통 workspace 커밋을 제한.(사람에 실수 까지도 시스템이 제한)
 - 필요한 경우 일반 개발자도 쉽게 커밋제한을 해제 할 수 있어야 한다. 
@@ -124,6 +123,8 @@ commDeveloperPC
 readonly COMM_OWNER_HOST_NAMES=("godBeomPC", "commDeveloperPC") // 추가
 ```
 
+## lerna Scripts
+lerna add vue-cookies --scope=@app/dsv;  
 
 
 ## refs
