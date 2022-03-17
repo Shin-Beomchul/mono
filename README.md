@@ -43,8 +43,6 @@ CC--yarn serve:xxx -->G([some your Project])
 
   - packages/*는 다른 workspace에서도 자유롭게 참조 가능.
   - components/*는 applications workspace에서만 참조.
-  - 각모듈은 서로 내부에서 어떤일이 일어나는지 알 수 없어야 한다.
-  - 가능한 preBuild모듈타입을 지향하여 개발한다.   
 
 ## 모듈타입
 
