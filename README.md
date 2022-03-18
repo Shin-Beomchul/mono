@@ -4,7 +4,7 @@ Name         | Version    |
 `Vue`        | 3.0.0      | 
 `Node`       | 16.14.0    |  
 `lerna`      | 4.0.0      |  
-`yarn`       | 1.22.17    |  
+`yarn berry` | 3.2.0      |  
 `tsc`        | 4.5.4      |
  
  ## Mono프로젝트 구조.
@@ -59,8 +59,9 @@ ex) components/quassar/q-btn을 dml에서 사용 시 빌드 불가. dml은 quass
 ## installs
 ```sh
 - nvm use 16.14.0
-- npm install --global yarn@1.22.17
-- npm install -g lerna@4.0.0
+# - npm install --global yarn@1.22.17
+- npm install --global yarn@3.2.0
+# - npm install -g lerna@4.0.0
 - npm install @vue/cli -g (@vue/cli 4.5.15 - Optional
 ```
 

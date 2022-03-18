@@ -2,19 +2,19 @@ FROM node:16.14.0-alpine3.14 as node
 WORKDIR /app
 
 # installs
-RUN npm install --global yarn@1.22.17 --force
+RUN npm install --global yarn@3.2.0 --force
 RUN npm install --global lerna@4.0.0
 
 # copy all
 COPY . .
 
 # hoisting
-RUN lerna bootstrap
+RUN yarn install
 
 # build packages workspace(for PreBuild Module)
 #Optionanl(공통개발자가 추가/수정 후 PreBuild를 제대로 수행 했다는 가정하에 불필요.)
-RUN lerna run build:packages 
-RUN lerna run build:components 
+RUN yarn build:packages 
+RUN yarn build:components 
 # build dml
 RUN yarn build:dml
 
