@@ -60,8 +60,9 @@ ex) components/quassar/q-btn을 dml에서 사용 시 빌드 불가. dml은 quass
 ```sh
 - nvm use 16.14.0
 # - npm install --global yarn@1.22.17
-- npm install --global yarn@3.2.0
-# - npm install -g lerna@4.0.0
+- npm install --global yarn
+- yarn set version berry
+- npm install -g lerna@4.0.0
 - npm install @vue/cli -g (@vue/cli 4.5.15 - Optional
 ```
 
