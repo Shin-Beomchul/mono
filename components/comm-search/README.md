@@ -1,4 +1,4 @@
-# comm-search (PreBuild Component)
+# comm-search (PreBuild Component : hot Reload X )
 
 ## 격리 실행 & 개발.
 

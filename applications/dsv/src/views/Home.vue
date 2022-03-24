@@ -75,6 +75,6 @@ export default defineComponent({
 
 <style scoped lang="scss">
 #content {
-  height: 650px;
+  height: 300px;
 }
 </style>

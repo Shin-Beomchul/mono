@@ -20,7 +20,6 @@ import { CommGnb, CommFooter, JwtToken } from "@god/comm-components";
 import { MockService, MockAPIMode } from "@god/mock-service";
 import { sayHello } from "@god/type-utils";
 import { HelloTypeClass } from "@god/type-utils";
-
 import { PersistentLruCache, PresitentType } from "@god/lru-cache";
 import router from "@/router";
 export default defineComponent({
@@ -45,6 +44,9 @@ export default defineComponent({
       max: 30,
     });
     persistentLruCache.setStorage("key", "hello");
+    persistentLruCache.isHit("key"); // hit : true
+    persistentLruCache.isHit("ghost"); // miss : false
+
     console.log(
       "persistentLruCache [exist Key]",
       persistentLruCache.isHit("key")
@@ -84,6 +86,6 @@ export default defineComponent({
 
 <style scoped lang="scss">
 #content {
-  height: 650px;
+  height: 300px;
 }
 </style>

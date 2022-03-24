@@ -6,13 +6,13 @@
 </template>
 
 <script lang="ts">
-  import {defineComponent} from 'vue';
-  import MembersLogin from '@/components/MembersLogin.vue';
+import { defineComponent } from "vue";
+import MembersLogin from "@/components/MembersLogin.vue";
 
-  export default defineComponent({
-    name: 'Home',
-    components: {
-      MembersLogin,
-    },
-  });
+export default defineComponent({
+  name: "Home",
+  components: {
+    MembersLogin,
+  },
+});
 </script>

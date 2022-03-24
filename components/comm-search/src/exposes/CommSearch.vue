@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import SearchButton from "../components/SearchButton.vue";
+import SearchButton from "@/components/SearchButton.vue";
 
 export default defineComponent({
   name: "CommSearch",
