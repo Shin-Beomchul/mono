@@ -11,10 +11,11 @@
 </template>
 
 <script lang="ts">
-import {
-  SearchButton,
-  CommSearch,
-} from "@god/comm-search"; /* @@god/comm-search */
+/**
+ * @author Shin-BeomChul
+ * @description monoRepository Dependency Example
+ */
+import { SearchButton, CommSearch } from "@god/comm-search";
 import { defineComponent } from "vue";
 import { CommGnb, CommFooter, JwtToken } from "@god/comm-components";
 import { MockService, MockAPIMode } from "@god/mock-service";

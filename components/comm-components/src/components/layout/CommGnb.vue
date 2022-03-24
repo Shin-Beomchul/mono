@@ -8,11 +8,17 @@
 </template>
 
 <script lang="ts">
+/**
+ * @author Shin-BeomChul
+ * @description comm Gnb
+ * @emits
+ *  onClickLogin(event: Event)
+ *  onClickLoginCommSearch(event: Event)
+ */
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "CommGnb",
-
   setup(props, context) {
     const onClickLogin = (event: Event) => {
       context.emit("onClickLogin", event);

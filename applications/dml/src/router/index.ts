@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import { CommSearch } from "@god/comm-search"; /* @@god/comm-search */
-import { MembersLogin } from "@god/comm-components/src/exposes";
+import { CommSearch } from "@god/comm-search";
+import { MembersLogin } from "@god/comm-components";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",

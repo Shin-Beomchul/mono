@@ -28,7 +28,12 @@ import { defineComponent } from "vue";
 import jwtDecode from "jwt-decode";
 import { JwtToken } from "../types/JwtToken";
 import { VueCookieNext } from "vue-cookie-next";
-/** TODO : Modal or Popup */
+/**
+ * @author Shin-BeomChul
+ * @description Login
+ * @emits
+ *  onLoginSuccess(jwtToken: JwtToken)
+ */
 export default defineComponent({
   name: "MembersLogin",
   props: {

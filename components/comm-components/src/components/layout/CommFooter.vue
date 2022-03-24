@@ -24,6 +24,12 @@
 </template>
 
 <script lang="ts">
+/**
+ * @author Shin-BeomChul
+ * @description comm Footer
+ * @emits
+ *  onFooterItemClick(event: Event, itemKey: string)
+ */
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "CommFooter",

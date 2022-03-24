@@ -1,4 +1,7 @@
-# comm-components (Include Component)
+# comm-components (Include Component Hot Reload)
+- 편의를 위해 Include 방식을 사용하나 PreBuild(comm-search)가 가장 이상적.
+- 사용 되어지는 App의 컴파일러에 의존 : App의 FrameWork에 종속.
+
 
 @App/\*
 
