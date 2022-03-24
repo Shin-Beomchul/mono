@@ -21,7 +21,6 @@ Name         | Version    |
     ㄴ lru-cache : LruCache 패키지
     ㄴ mock-service : MockService 패키지
     ㄴ type-utils : 유틸 패키지(Pre Build)
-    
 ~~~
 ## 프로젝트 실행과정
 ```mermaid
@@ -51,10 +50,7 @@ CC--yarn serve:xxx -->G([some your Project])
 ```
 ex) components/quassar/q-btn을 dml에서 사용 시 빌드 불가. dml은 quassar 프레임워크를 사용하지 않으므로 quassar 컴파일 불가. 
 ```
-## plugins
-- ESLint
-- Vetur
-- Prettier
+
 
 ## installs
 ```sh
