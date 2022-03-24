@@ -81,8 +81,7 @@ ex) components/quassar/q-btn을 dml에서 사용 시 빌드 불가. dml은 quass
 ```mermaid
 graph TB
 A(Docker Host: ../mono) --docker build -f Dockerfile-dml-develop --> B((Docker Build Start))
-B --lerna bootstrap--> C(모듈종속 호이스팅) --lerna run build:packages--> ALL(packages/* Build Complete)
-ALL --yarn build:dml-->D2(applications/dml/dist/*)
+B --yarn install--> C(모듈종속 호이스팅) --yarn build:dml-->D2(applications/dml/dist/*)
 D2 --nginx Copy-->E(Docker Image)
 E --docker run --name 'mono-dml' -d -p 21101:80 mono-dml-->FI(컨테이너 적재)
 ```

@@ -26,37 +26,3 @@ COPY applications/dml/nginx-develop.d/. /etc/nginx/conf.d
 COPY --from=node /app/applications/dml/dist /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
-
-
-
-
-
-
-
-# ---Legacy---
-
-# FROM node:16.14.0-alpine3.14 as node
-# WORKDIR /app
-
-# # installs
-# RUN npm install --global yarn@1.22.17 --force
-# RUN npm install --global lerna@4.0.0
-
-# # copy all
-# COPY . .
-
-# # hoisting
-# RUN lerna bootstrap
-
-# # build all modules
-# RUN lerna run build
-
-# # build dml
-# # RUN yarn build:dml
-
-# # nginx 
-# FROM nginx:1.13.12-alpine
-# COPY applications/dml/nginx-develop.d/. /etc/nginx/conf.d
-# COPY --from=node /app/applications/dml/dist /usr/share/nginx/html
-# EXPOSE 80
-# CMD ["nginx", "-g", "daemon off;"]
