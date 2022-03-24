@@ -20,12 +20,12 @@ Name         | Version    |
 --packages
     ㄴ lru-cache : LruCache 패키지
     ㄴ mock-service : MockService 패키지
-    ㄴ type-utils : 유틸 패키지(Pre Build)
+    ㄴ type-utils : 유틸 패키지
 ~~~
 ## 프로젝트 실행과정
 ```mermaid
 graph LR
-A(Start) --lerna bootstrap --> B(모듈종속 호이스팅) --build:packages--> C(packages빌드)--build:components--> CC(preBuild 컴포넌트 빌드)
+A(Start) --yarn install --> B(모듈종속 호이스팅) --yarn build:packages--> C(packages빌드)--yarn build:components--> CC(preBuild 컴포넌트 빌드)
 CC--yarn serve:dml -->D([DML프로젝트실행])
 CC--yarn serve:dsv-->E([DSV프로젝트실행])
 CC--yarn serve:search -->F([comm-search프로젝트실행])
@@ -55,11 +55,10 @@ ex) components/quassar/q-btn을 dml에서 사용 시 빌드 불가. dml은 quass
 ## installs
 ```sh
 - nvm use 16.14.0
-# - npm install --global yarn@1.22.17
 - npm install --global yarn
 - yarn set version berry
 - npm install -g lerna@4.0.0
-- npm install @vue/cli -g (@vue/cli 4.5.15 - Optional
+- npm install @vue/cli -g (@vue/cli 4.5.15 - Optional)
 ```
 
 ## Execute
