@@ -64,8 +64,8 @@ ex) components/quassar/q-btn을 dml에서 사용 시 빌드 불가. dml은 quass
 
 ## Execute
 ```sh
-- lerna bootstrap
-- lerna run build
+- yarn install
+- yarn build:components
 - yarn serve:dml
 ```
 
