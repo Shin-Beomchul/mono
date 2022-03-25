@@ -1,6 +1,6 @@
 <template>
   <span>
-    <button>검색</button>
+    <button id="btn-search">검색</button>
   </span>
 </template>
 
@@ -10,9 +10,6 @@ export default defineComponent({
   name: "SearchButton",
 });
 </script>
-
 <style scoped lang="scss">
-#comm-footer {
-  background: #b94248;
-}
+@import "@/assets/styles/_search.scss";
 </style>

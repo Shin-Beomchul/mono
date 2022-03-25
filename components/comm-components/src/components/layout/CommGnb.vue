@@ -36,7 +36,5 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-#comm-gnb {
-  background: #5c42b9;
-}
+@import "../../assets/styles/_layout.scss";
 </style>
