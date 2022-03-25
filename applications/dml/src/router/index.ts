@@ -17,6 +17,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "login",
     component: MembersLogin,
   },
+  {
+    path: "/store",
+    name: "store",
+    component: import(/* webpackChunkName: "product" */ "@/views/Store.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

@@ -9,7 +9,7 @@
 <script lang="ts">
 /**
  * @author Shin-BeomChul
- * @description monoRepository Dependency Example
+ * @description Home
  */
 import { defineComponent } from "vue";
 export default defineComponent({
@@ -24,7 +24,7 @@ export default defineComponent({
     };
   },
   created() {
-    console.log("create");
+    console.log("create Home");
   },
   methods: {},
 });
