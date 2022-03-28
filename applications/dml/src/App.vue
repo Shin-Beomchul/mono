@@ -45,40 +45,43 @@ export default defineComponent({
   },
   data() {
     return {
+      isExampleLog: false,
       jwtToken: {} as JwtToken, //JwtToken Interface
     };
   },
   created() {
-    console.log("useI18n welcome Message", useI18n().t("welcome"));
-    console.log("SearchButton", SearchButton);
-    console.log("CommSearch", CommSearch);
-    /* @god/lru-cache*/
-    let persistentLruCache = new PersistentLruCache(PresitentType.Local, {
-      max: 30,
-    });
-    persistentLruCache.setStorage("key", "hello");
-    persistentLruCache.isHit("key"); // hit : true
-    persistentLruCache.isHit("ghost"); // miss : false
+    if (this.isExampleLog) {
+      console.log("useI18n welcome Message", useI18n().t("welcome"));
+      console.log("SearchButton", SearchButton);
+      console.log("CommSearch", CommSearch);
+      /* @god/lru-cache*/
+      let persistentLruCache = new PersistentLruCache(PresitentType.Local, {
+        max: 30,
+      });
+      persistentLruCache.setStorage("key", "hello");
+      persistentLruCache.isHit("key"); // hit : true
+      persistentLruCache.isHit("ghost"); // miss : false
 
-    console.log(
-      "persistentLruCache [exist Key]",
-      persistentLruCache.isHit("key")
-    );
-    console.log(
-      "persistentLruCache [Not exist Key]",
-      persistentLruCache.isHit("ghost")
-    );
+      console.log(
+        "persistentLruCache [exist Key]",
+        persistentLruCache.isHit("key")
+      );
+      console.log(
+        "persistentLruCache [Not exist Key]",
+        persistentLruCache.isHit("ghost")
+      );
 
-    /* @god/type-utils*/
-    sayHello(); // function
-    let heloTypeClass = new HelloTypeClass(); // Class
-    console.log(heloTypeClass.getName());
+      /* @god/type-utils*/
+      sayHello(); // function
+      let heloTypeClass = new HelloTypeClass(); // Class
+      console.log(heloTypeClass.getName());
 
-    // @god/mock-service
-    let mockService = new MockService();
-    mockService
-      .getMockAxiosResponse(MockAPIMode.FAST)
-      .then((r) => console.log("use MockService", r));
+      // @god/mock-service
+      let mockService = new MockService();
+      mockService
+        .getMockAxiosResponse(MockAPIMode.FAST)
+        .then((r) => console.log("use MockService", r));
+    }
   },
   methods: {
     /** 로그인 클릭 시 */

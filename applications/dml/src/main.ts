@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
-import store from "./store"; //@deprecated @See pinia
+import store from "./store/vuex"; //@deprecated @See pinia
 import { createPinia } from "pinia";
 import { setupI18n } from "@/i18n/i18n";
 import koMessages from "@/i18n/locales/ko.json";
