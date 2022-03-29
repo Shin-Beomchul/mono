@@ -1,4 +1,5 @@
 const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   css: {
     extract: false,
@@ -18,14 +19,17 @@ module.exports = {
    */
   chainWebpack: (config) => {
     config.resolve.symlinks(false);
-    // config.plugin("copy").tap((args) => {
-    //   args[0].push({
-    //     from: path.resolve(__dirname, "src/assets/others"),
-    //     to: path.resolve(__dirname, "dist/others"),
-    //     toType: "dir",
-    //     ignore: [".DS_Store"],
-    //   });
-    //   return args;
-    // });
+    // copy langJson to lib(dist)
+    config
+      .plugin("copy")
+      .use(new CopyPlugin({
+        patterns: [
+           { 
+            from: path.resolve(__dirname, "src/i18n/locales"), 
+            to: path.resolve(__dirname, "lib") 
+           }
+        ],
+        
+      }))
   },
 };

@@ -13,7 +13,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2020,
   },
-  ignorePatterns: ["dist", "packages/**/lib/*.*" , "**/vue.config.js"], // tsLint 무시할 폴더 지정
+  ignorePatterns: ["dist", "packages/**/lib/*.*" , "**/vue.config.js" ], // tsLint 무시할 폴더 지정
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
