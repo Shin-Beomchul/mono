@@ -1,3 +1,4 @@
+const path = require("path");
 module.exports = {
   css: {
     extract: false,
@@ -17,5 +18,14 @@ module.exports = {
    */
   chainWebpack: (config) => {
     config.resolve.symlinks(false);
+    // config.plugin("copy").tap((args) => {
+    //   args[0].push({
+    //     from: path.resolve(__dirname, "src/assets/others"),
+    //     to: path.resolve(__dirname, "dist/others"),
+    //     toType: "dir",
+    //     ignore: [".DS_Store"],
+    //   });
+    //   return args;
+    // });
   },
 };

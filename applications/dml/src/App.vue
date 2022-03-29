@@ -9,7 +9,6 @@
     >
     </comm-gnb>
   </div>
-
   <!-- content -->
   <router-view id="content" />
 
@@ -33,6 +32,7 @@ import { PersistentLruCache, PresitentType } from "@god/lru-cache";
 import { useI18n } from "vue-i18n";
 import router from "@/router";
 import { i18n } from "@/main";
+import { useAppStore } from "./store/pinia/app/appStore";
 
 export default defineComponent({
   components: {
@@ -48,6 +48,9 @@ export default defineComponent({
       isExampleLog: false,
       jwtToken: {} as JwtToken, //JwtToken Interface
     };
+  },
+  setup() {
+    return {};
   },
   created() {
     if (this.isExampleLog) {
@@ -93,12 +96,15 @@ export default defineComponent({
     async onChangeLang(lang: string) {
       await loadLocaleMessages(i18n, lang);
       setI18nLanguage(i18n, lang);
+      useAppStore().appConfig.lang = lang;
     },
     /** 홈으로 가기 클릭 */
     onClickHome() {
       console.log("onClickLogin");
       router.push("/");
     },
+
+    /**통합검색 클릭 시 */
     async onClickLoginCommSearch() {
       console.log("onClickLoginCommSearch");
       router.push("/comm-search");

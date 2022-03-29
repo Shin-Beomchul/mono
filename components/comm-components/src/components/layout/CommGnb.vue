@@ -5,8 +5,8 @@
       <button @click="onClickLoginCommSearch">통합검색</button>
       <button @click="onClickLogin">Login</button>
       <select v-model="lang" @change="onChangeLang($event)">
-        <option value="en">English</option>
         <option value="ko">한국어</option>
+        <option value="en">English</option>
       </select>
     </div>
   </div>
@@ -50,7 +50,7 @@ export default defineComponent({
   },
   data() {
     return {
-      lang: "en",
+      lang: "ko",
     };
   },
 });

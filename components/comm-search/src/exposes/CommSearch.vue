@@ -2,7 +2,8 @@
   <div id="comm-search-container">
     <h1>{{ msg }}</h1>
     <input /> <search-button></search-button>
-    <div>공통 통합검색 페이지 컴포넌트</div>
+
+    <div>{{ $t("comm.search.hello") }}</div>
   </div>
 </template>
 
@@ -18,8 +19,8 @@ export default defineComponent({
   components: {
     SearchButton,
   },
-  created() {
-    console.log("hello CommSearch");
+  setup() {
+    return {};
   },
 });
 </script>
