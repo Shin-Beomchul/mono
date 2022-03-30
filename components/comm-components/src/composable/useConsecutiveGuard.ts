@@ -1,13 +1,15 @@
 /**
   @author  Shin-BeomChul
   @description 이전 호출 이후 delay가 만료 되면 @func 가 즉시 호출, delay만료 전에 중복 호출 시 무시.
-  @example 버튼 연타 방지
+  @when 버튼 연타 방지
 
    <=== Template ===>
-   <button @click="consecutiveGuard($event, 'apiKey')"> consecutiveGuard </button>
+   <button @click="consecutiveGuardAPI($event, 'apiKey')"> consecutiveGuardAPI </button>
 
+   <=== Javascript ===>
    setUp(){
-      const consecutiveGuard = useConsecutiveGuard(1000, apiFunction, (state) => {
+      const apiFunction = (event, param) => { // call your API or .. }
+      const consecutiveGuardAPI = useConsecutiveGuard(1000, apiFunction, (state) => {
       console.log(state);
      });
 

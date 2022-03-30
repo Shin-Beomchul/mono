@@ -1,22 +1,10 @@
 <template>
   <div id="loginContainer">
     <div>
-      <input
-        v-model="emailLogin"
-        type="email"
-        class="form-control"
-        placeholder="Email"
-        required
-      />
+      <input v-model="emailLogin" type="email" class="form-control" placeholder="Email" required />
     </div>
     <div>
-      <input
-        v-model="passwordLogin"
-        type="password"
-        class="form-control"
-        placeholder="Password"
-        required
-      />
+      <input v-model="passwordLogin" type="password" class="form-control" placeholder="Password" required />
     </div>
     <button @click="onLogin">Login</button>
     <div>{{ jwtToken }}</div>
@@ -60,10 +48,7 @@ export default defineComponent({
       decodedToken.token = token;
       VueCookieNext.config({ domain: ".god.com" }); // 서브도메인이 다를때 쿠키값 공유
       VueCookieNext.setCookie("Authentication", token);
-      console.log(
-        "Login Success Token => ",
-        VueCookieNext.getCookie("Authentication")
-      );
+      console.log("Login Success Token => ", VueCookieNext.getCookie("Authentication"));
 
       // callback Login Success
       this.$emit("onLoginSuccess", decodedToken);

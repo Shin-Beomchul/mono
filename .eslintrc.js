@@ -21,7 +21,7 @@ module.exports = {
     semi: ["error", "always"], // 세미콜론 허용여부
     "semi-spacing": ["error", { before: false, after: true }], // 세미콜론 빈공간 허용 여부 - https://eslint.org/docs/rules/semi-spacing
     "space-before-blocks": "error", // block 이전 빈공간
-    indent: ["error", 2], // indent는 4로 고정
+    // indent: ["error", 2], // indent는 4로 고정
     "vue/html-indent": ["error", 2], // html indent space 개수 (vscode의 spaces가 indent 우선순위를 가짐)
     "vue/max-attributes-per-line": ["error", { singleline: 20 }], // vue html element 줄 당 최대 attribute 개수
     "vue/this-in-template": ["error", "never"], // vue html에 바인딩되는 vuejs 변수 this 허용여부

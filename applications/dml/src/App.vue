@@ -13,8 +13,7 @@
   <router-view id="content" />
 
   <!-- Footer -->
-  <comm-footer id="footer" @onFooterItemClick="onFooterItemClick">
-  </comm-footer>
+  <comm-footer id="footer" @onFooterItemClick="onFooterItemClick"> </comm-footer>
 </template>
 <script lang="ts">
 /**
@@ -65,14 +64,8 @@ export default defineComponent({
       persistentLruCache.isHit("key"); // hit : true
       persistentLruCache.isHit("ghost"); // miss : false
 
-      console.log(
-        "persistentLruCache [exist Key]",
-        persistentLruCache.isHit("key")
-      );
-      console.log(
-        "persistentLruCache [Not exist Key]",
-        persistentLruCache.isHit("ghost")
-      );
+      console.log("persistentLruCache [exist Key]", persistentLruCache.isHit("key"));
+      console.log("persistentLruCache [Not exist Key]", persistentLruCache.isHit("ghost"));
 
       /* @god/type-utils*/
       sayHello(); // function
@@ -81,9 +74,7 @@ export default defineComponent({
 
       // @god/mock-service
       let mockService = new MockService();
-      mockService
-        .getMockAxiosResponse(MockAPIMode.FAST)
-        .then((r) => console.log("use MockService", r));
+      mockService.getMockAxiosResponse(MockAPIMode.FAST).then((r) => console.log("use MockService", r));
     }
   },
   methods: {

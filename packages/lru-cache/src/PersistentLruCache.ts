@@ -24,8 +24,7 @@ export default class PersistentLruCache<V> {
       default:
         this.cacheStorage = new CacheStorageOfSession();
     }
-    this.savedKeys =
-      (this.cacheStorage.get("cacheSavedKeys") as string[]) || [];
+    this.savedKeys = (this.cacheStorage.get("cacheSavedKeys") as string[]) || [];
   }
 
   switch(cacheStorage: CacheStorage) {
@@ -42,10 +41,7 @@ export default class PersistentLruCache<V> {
   setStorage(key: string, value: V): boolean {
     // 캐시 사이즈 보다 크면 가장 오래된 데이터 삭제.
     if (this.savedKeys.length >= this.CAPACITY) {
-      this.savedKeys = this.savedKeys.splice(
-        -this.CAPACITY,
-        this.savedKeys.length
-      );
+      this.savedKeys = this.savedKeys.splice(-this.CAPACITY, this.savedKeys.length);
       const firstKey = this.savedKeys.shift();
       if (firstKey != undefined) this.cacheStorage.del(firstKey);
     }
