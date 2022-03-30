@@ -27,9 +27,7 @@ export function setI18nLanguage(i18n, locale) {
 
 export async function loadLocaleMessages(i18n, locale) {
   // load locale messages with dynamic import
-  const messages = await import(
-    /* webpackChunkName: "locale-[request]" */ `@/i18n/locales/${locale}.json`
-  );
+  const messages = await import(/* webpackChunkName: "locale-[request]" */ `@/i18n/locales/${locale}.json`);
   const messagesOfComm = await import(
     /* webpackChunkName: "locale-[request]" */ `@god/comm-search/src/i18n/locales/${locale}.json`
   );

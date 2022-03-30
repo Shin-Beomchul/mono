@@ -1,7 +1,7 @@
 /**
-  @author  Shin-BeomChul
+  @author Shin-BeomChul
   @description 이전 호출 이후 delay가 만료 되면 @func 가 즉시 호출, delay만료 전에 중복 호출 시 무시.
-  @when 버튼 연타 방지
+  @whenToUse 버튼 연타 방지
 
    <=== Template ===>
    <button @click="consecutiveGuardAPI($event, 'apiKey')"> consecutiveGuardAPI </button>
