@@ -1431,9 +1431,11 @@ __metadata:
     "@vue/cli-plugin-vuex": ~4.5.0
     "@vue/cli-service": ~4.5.0
     "@vue/compiler-sfc": ^3.0.0
+    "@vue/composition-api": ^1.4.9
     "@vue/test-utils": ^2.0.0-0
     chai: ^4.1.2
     core-js: ^3.6.5
+    i: ^0.3.7
     jwt-decode: ^3.1.2
     sass: ^1.26.5
     sass-loader: ^8.0.2
@@ -3577,6 +3579,15 @@ __metadata:
     prettier:
       optional: true
   checksum: 70fee2289a4f54ec1be4d46136ee9b9893e31bf5622cead5be06c3dfb83449c3dbe6f8c03404625ccf302d0628ff9e2ea1debfae609d1bfe1d065d8f57c5dba8
+  languageName: node
+  linkType: hard
+
+"@vue/composition-api@npm:^1.4.9":
+  version: 1.4.9
+  resolution: "@vue/composition-api@npm:1.4.9"
+  peerDependencies:
+    vue: ">= 2.5 < 3"
+  checksum: 08853aee4326804f9b8e53d7abc53bbcfc44e1b9df260644656ae39803b4c3427d5deeb87821413a1e82737704447743cf573315f3f4f038c2b29c7cf6cd5910
   languageName: node
   linkType: hard
 
@@ -9358,6 +9369,13 @@ __metadata:
   bin:
     husky: lib/bin.js
   checksum: c6ec4af63da2c9522da8674a20ad9b48362cc92704896cc8a58c6a2a39d797feb2b806f93fbd83a6d653fbdceb2c3b6e0b602c6b2e8565206ffc2882ef7db9e9
+  languageName: node
+  linkType: hard
+
+"i@npm:^0.3.7":
+  version: 0.3.7
+  resolution: "i@npm:0.3.7"
+  checksum: 97db09a9377223511bbc416f22e24ee7b90417b0a384710756b2ab74e6cbd95a93ff5856c4bdd8d12d9a74e2460fcbf895f0c2525b6ab2f7898795cb5a5743cf
   languageName: node
   linkType: hard
 

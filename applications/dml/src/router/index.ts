@@ -22,6 +22,13 @@ const routes: Array<RouteRecordRaw> = [
     name: "store",
     component: import(/* webpackChunkName: "product" */ "@/views/Store.vue"),
   },
+  {
+    path: "/composable",
+    name: "composable",
+    component: import(
+      /* webpackChunkName: "product" */ "@/views/Composable.vue"
+    ),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
