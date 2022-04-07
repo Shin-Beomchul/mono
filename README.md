@@ -59,6 +59,7 @@ ex) components/quassar/q-btn을 dml에서 사용 시 빌드 불가. dml은 quass
 - yarn set version berry
 - npm install -g lerna@4.0.0
 - npm install @vue/cli -g (@vue/cli 4.5.15 - Optional)
+- npm install typescript@4.5.4 -g
 ```
 
 ## Execute

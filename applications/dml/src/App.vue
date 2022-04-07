@@ -61,11 +61,8 @@ export default defineComponent({
         max: 30,
       });
       persistentLruCache.setStorage("key", "hello");
-      persistentLruCache.isHit("key"); // hit : true
-      persistentLruCache.isHit("ghost"); // miss : false
-
-      console.log("persistentLruCache [exist Key]", persistentLruCache.isHit("key"));
-      console.log("persistentLruCache [Not exist Key]", persistentLruCache.isHit("ghost"));
+      console.log("persistentLruCache [exist Key]", persistentLruCache.isHit("key")); // hit : true
+      console.log("persistentLruCache [Not exist Key]", persistentLruCache.isHit("ghost")); // miss : false
 
       /* @god/type-utils*/
       sayHello(); // function
